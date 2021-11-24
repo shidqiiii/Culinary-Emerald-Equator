@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class EndCondition : MonoBehaviour
 {
@@ -11,6 +10,7 @@ public class EndCondition : MonoBehaviour
     [SerializeField]bool selesai = false;
 
     public GameManager gameManager;
+    public SingleLevel singleLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +49,7 @@ public class EndCondition : MonoBehaviour
             gameManager.timeActive = false;
             wincondition.SetActive(true);
             puzzle.SetActive(false);
+            singleLevel.UpdateStar();
         }
     }
 
@@ -61,14 +62,11 @@ public class EndCondition : MonoBehaviour
             puzzle.transform.GetChild(i).position = puzzle.transform.GetChild(i).GetComponent<Dragdrop>().randomPos;
             puzzle.transform.GetChild(i).localScale = puzzle.transform.GetChild(i).GetComponent<Dragdrop>().scaleAwal;
             gameManager.currentTime = 0;
+            gameManager.timeActive = true;
         }
 
         selesai = false;
         puzzle.SetActive(true);
         wincondition.SetActive(false);
-    }
-    public void LevelToLoad(int stage)
-    {
-        SceneManager.LoadScene(stage);
     }
 }
