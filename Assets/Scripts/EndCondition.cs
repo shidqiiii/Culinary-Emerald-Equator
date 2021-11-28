@@ -9,6 +9,8 @@ public class EndCondition : MonoBehaviour
     public Text time;
     [SerializeField]bool selesai = false;
 
+    public GameObject star1, star2, star3;
+
     public GameManager gameManager;
     public SingleLevel singleLevel;
 
@@ -47,6 +49,7 @@ public class EndCondition : MonoBehaviour
         if (selesai)
         {
             gameManager.timeActive = false;
+            TimeStar();
             wincondition.SetActive(true);
             puzzle.SetActive(false);
             singleLevel.UpdateStar();
@@ -68,5 +71,27 @@ public class EndCondition : MonoBehaviour
         selesai = false;
         puzzle.SetActive(true);
         wincondition.SetActive(false);
+    }
+
+    void TimeStar()
+    {
+        if (gameManager.currentTime < 5f)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+        }
+        else if (gameManager.currentTime >= 5f && gameManager.currentTime < 10f)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(false);
+        }
+        if (gameManager.currentTime >= 10f)
+        {
+            star1.SetActive(true);
+            star2.SetActive(false);
+            star3.SetActive(false);
+        }
     }
 }

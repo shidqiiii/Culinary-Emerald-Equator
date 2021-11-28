@@ -5,7 +5,7 @@ using UnityEngine;
 public class SingleLevel : MonoBehaviour
 {
     [SerializeField] int currentStarsNum = 0;
-    [SerializeField] int _starsNum;
+    public int _starsNum;
     public int levelIndex;
 
     public GameManager gameManager;
