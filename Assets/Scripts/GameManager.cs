@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
         timeText.text = time.ToString(@"mm\:ss");
     }
+
     public void LoadScene(string _SceneName)
     {
         SceneManager.LoadScene(_SceneName);

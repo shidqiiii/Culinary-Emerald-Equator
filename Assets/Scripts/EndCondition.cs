@@ -13,6 +13,7 @@ public class EndCondition : MonoBehaviour
 
     public GameManager gameManager;
     public SingleLevel singleLevel;
+    public CoinManager coinManager;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +54,7 @@ public class EndCondition : MonoBehaviour
             wincondition.SetActive(true);
             puzzle.SetActive(false);
             singleLevel.UpdateStar();
+            coinManager.UpdateCoin();
         }
     }
 
