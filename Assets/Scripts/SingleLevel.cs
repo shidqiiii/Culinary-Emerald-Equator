@@ -8,7 +8,7 @@ public class SingleLevel : MonoBehaviour
     public int _starsNum;
     public int levelIndex;
 
-    public GameManager gameManager;
+    public TimeManager timeManager;
 
     // Start is called before the first frame update
     void Start()
@@ -36,15 +36,15 @@ public class SingleLevel : MonoBehaviour
 
     void TimeStar()
     {
-        if (gameManager.currentTime < 5f)
+        if (timeManager.currentTime < 5f)
         {
             _starsNum = 3;
         }
-        else if (gameManager.currentTime >= 5f && gameManager.currentTime < 10f)
+        else if (timeManager.currentTime >= 5f && timeManager.currentTime < 10f)
         {
             _starsNum = 2;
         }
-        if (gameManager.currentTime >= 10f)
+        if (timeManager.currentTime >= 10f)
         {
             _starsNum = 1;
         }

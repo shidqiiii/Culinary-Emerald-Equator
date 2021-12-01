@@ -11,7 +11,7 @@ public class EndCondition : MonoBehaviour
 
     public GameObject star1, star2, star3;
 
-    public GameManager gameManager;
+    public TimeManager timeManager;
     public SingleLevel singleLevel;
     public CoinManager coinManager;
 
@@ -38,7 +38,7 @@ public class EndCondition : MonoBehaviour
             if (transform.GetChild(i).GetComponent<Dragdrop>().onTempel)
             {
                 selesai = true;
-                time.text = gameManager.timeText.text;
+                time.text = time.text;
             }
             else
             {
@@ -49,7 +49,7 @@ public class EndCondition : MonoBehaviour
 
         if (selesai)
         {
-            gameManager.timeActive = false;
+            timeManager.timeActive = false;
             TimeStar();
             wincondition.SetActive(true);
             puzzle.SetActive(false);
@@ -66,8 +66,8 @@ public class EndCondition : MonoBehaviour
             puzzle.transform.GetChild(i).GetComponent<Dragdrop>().onPos = false;
             puzzle.transform.GetChild(i).position = puzzle.transform.GetChild(i).GetComponent<Dragdrop>().randomPos;
             puzzle.transform.GetChild(i).localScale = puzzle.transform.GetChild(i).GetComponent<Dragdrop>().scaleAwal;
-            gameManager.currentTime = 0;
-            gameManager.timeActive = true;
+            timeManager.currentTime = 0;
+            timeManager.timeActive = true;
         }
 
         selesai = false;
@@ -77,19 +77,19 @@ public class EndCondition : MonoBehaviour
 
     void TimeStar()
     {
-        if (gameManager.currentTime < 5f)
+        if (timeManager.currentTime < 5f)
         {
             star1.SetActive(true);
             star2.SetActive(true);
             star3.SetActive(true);
         }
-        else if (gameManager.currentTime >= 5f && gameManager.currentTime < 10f)
+        else if (timeManager.currentTime >= 5f && timeManager.currentTime < 10f)
         {
             star1.SetActive(true);
             star2.SetActive(true);
             star3.SetActive(false);
         }
-        if (gameManager.currentTime >= 10f)
+        if (timeManager.currentTime >= 10f)
         {
             star1.SetActive(true);
             star2.SetActive(false);

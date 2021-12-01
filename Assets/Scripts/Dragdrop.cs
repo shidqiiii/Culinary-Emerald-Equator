@@ -11,7 +11,7 @@ public class Dragdrop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector2(Random.Range(-1.08f, 1.08f), -4.02f);
+        transform.position = new Vector2(Random.Range(-0.35f, 0.35f), Random.Range(-4.1f, -4.3f));
 
         randomPos = transform.position;
 
