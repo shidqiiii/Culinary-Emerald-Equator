@@ -37,7 +37,6 @@ public class EndCondition : MonoBehaviour
             {
                 selesai = true;
                 time.text = timeManager.timeText.text;
-                coin.text = coinManager.coinText.text;
             }
             else
             {
@@ -53,6 +52,7 @@ public class EndCondition : MonoBehaviour
             gameManager.TimeStar();
             //singleLevel.UpdateStar();
             coinManager.UpdateCoin();
+            coin.text = coinManager.coinText.text;
         }
     }
 
@@ -70,7 +70,6 @@ public class EndCondition : MonoBehaviour
 
         selesai = false;
         puzzle.SetActive(true);
-        gameManager.ResetGame();
     }
 
     

@@ -11,7 +11,7 @@ public class Dragdrop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector2(Random.Range(-0.35f, 0.35f), Random.Range(-4.1f, -4.3f));
+        transform.position = new Vector2(Random.Range(-0.35f, 0.35f), -4.19f);
 
         randomPos = transform.position;
 
@@ -34,11 +34,11 @@ public class Dragdrop : MonoBehaviour
         }
     }
 
-    private void OnMouseUp()
+    public void OnMouseUp()
     {
         if (onPos)
         {
-            transform.position = detector.transform.position; transform.localScale = new Vector2(1f, 1f);
+            transform.position = detector.transform.position; 
             transform.localScale = new Vector2(1.2f, 1.2f);
             onTempel = true;
         }

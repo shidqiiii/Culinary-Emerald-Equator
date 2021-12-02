@@ -14,14 +14,14 @@ public class CoinManager : MonoBehaviour
         if (PlayerPrefs.HasKey("Coin"))
         {
             currentCoin = PlayerPrefs.GetInt("Coin");
-            coinText.text = currentCoin.ToString();
         }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        coinText.text = currentCoin.ToString();
     }
 
     public void UpdateCoin()
