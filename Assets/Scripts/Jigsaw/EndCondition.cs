@@ -49,7 +49,7 @@ public class EndCondition : MonoBehaviour
         if (selesai)
         {
             timeManager.timeActive = false;
-            gameManager.EndCondition();
+            gameManager.WinCondition();
             gameManager.TimeStar();
             //singleLevel.UpdateStar();
             coinManager.UpdateCoin();

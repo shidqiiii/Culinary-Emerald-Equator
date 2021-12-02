@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject endcondition, pausemenu, puzzle;
+    public GameObject winCondition, pausemenu, puzzle;
 
     public TimeManager timeManager;
     public EndCondition endCondition;
@@ -29,10 +29,10 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void EndCondition()
+    public void WinCondition()
     {
         puzzle.SetActive(false);
-        endcondition.SetActive(true);
+        winCondition.SetActive(true);
         pausemenu.SetActive(false);
         Time.timeScale = 1f;
     }
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
     {
         endCondition.ResetPuzzle();
         puzzle.SetActive(true);
-        endcondition.SetActive(false);
+        winCondition.SetActive(false);
         pausemenu.SetActive(false); 
         Time.timeScale = 1f;
     }
