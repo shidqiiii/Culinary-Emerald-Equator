@@ -66,24 +66,68 @@ public class GameManager : MonoBehaviour
 
     public void TimeStar()
     {
-        if (timeManager.currentTime < 5f)
+        if (SceneManager.GetActiveScene().name == "Level 1" || SceneManager.GetActiveScene().name == "Level 2")
         {
             star1.SetActive(true);
             star2.SetActive(true);
             star3.SetActive(true);
         }
-        else if (timeManager.currentTime >= 5f && timeManager.currentTime < 10f)
+
+        else if (SceneManager.GetActiveScene().name == "Level 3" || SceneManager.GetActiveScene().name == "Level 4")
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(false);
+            if (timeManager.currentTime < 60f)
+            {
+                star1.SetActive(true);
+                star2.SetActive(true);
+                star3.SetActive(true);
+            }
+            else if (timeManager.currentTime >= 60f && timeManager.currentTime < 120f)
+            {
+                star1.SetActive(true);
+                star2.SetActive(true);
+                star3.SetActive(false);
+            }
+            else if(timeManager.currentTime >= 120f)
+            {
+                star1.SetActive(true);
+                star2.SetActive(false);
+                star3.SetActive(false);
+            }
+            else if (timeManager.currentTime >= 180f)
+            {
+                star1.SetActive(false);
+                star2.SetActive(false);
+                star3.SetActive(false);
+            }
         }
-        if (timeManager.currentTime >= 10f)
+        else if (SceneManager.GetActiveScene().name == "Level 5")
         {
-            star1.SetActive(true);
-            star2.SetActive(false);
-            star3.SetActive(false);
+            if (timeManager.currentTime < 90f)
+            {
+                star1.SetActive(true);
+                star2.SetActive(true);
+                star3.SetActive(true);
+            }
+            else if (timeManager.currentTime >= 90f && timeManager.currentTime < 150f)
+            {
+                star1.SetActive(true);
+                star2.SetActive(true);
+                star3.SetActive(false);
+            }
+            else if (timeManager.currentTime >= 150f)
+            {
+                star1.SetActive(true);
+                star2.SetActive(false);
+                star3.SetActive(false);
+            }
+            else if (timeManager.currentTime >= 240f)
+            {
+                star1.SetActive(false);
+                star2.SetActive(false);
+                star3.SetActive(false);
+            }
         }
+        
     }
 
     public void LoadScene(string _SceneName)

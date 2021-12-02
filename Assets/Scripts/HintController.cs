@@ -8,7 +8,6 @@ public class HintController : MonoBehaviour
     public int currentHint = 0, Hint;
     public Text hintText;
 
-    public GameObject[] pieces;
     public Dragdrop[] dragdrops;
     int indexHint = 0;
 
@@ -36,7 +35,7 @@ public class HintController : MonoBehaviour
         hintText.text = currentHint.ToString();
     }
 
-    public void UseHint()
+    public void UseHintJigsaw()
     {
         if(currentHint > 0)
         {
@@ -48,33 +47,16 @@ public class HintController : MonoBehaviour
         else
         {
             currentHint = 0;
-            indexHint = pieces.Length;
+            indexHint = dragdrops.Length;
         }
         
     }
 
     public void IndexHint()
     {
-        if (indexHint == 1)
-        {
-            dragdrops[0].onPos = true;
-            dragdrops[0].OnMouseUp();
-        }
-        if (indexHint == 2)
-        {
-            dragdrops[1].onPos = true;
-            dragdrops[1].OnMouseUp();
-        }
-        if (indexHint == 3)
-        {
-            dragdrops[2].onPos = true;
-            dragdrops[2].OnMouseUp();
-        }
-        if (indexHint == 4)
-        {
-            dragdrops[3].onPos = true;
-            dragdrops[3].OnMouseUp();
-        }
+        int i = indexHint;
+        dragdrops[i].onPos = true;
+        dragdrops[i].OnMouseUp();
     }
 
 }

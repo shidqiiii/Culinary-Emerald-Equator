@@ -59,7 +59,7 @@ public class EndCondition : MonoBehaviour
 
     public void ResetPuzzle()
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < pos.Length; i++)
         {
             puzzle.transform.GetChild(i).GetComponent<Dragdrop>().onTempel = false;
             puzzle.transform.GetChild(i).GetComponent<Dragdrop>().onPos = false;
