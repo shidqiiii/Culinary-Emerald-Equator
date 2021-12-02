@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //PlayerPrefs.DeleteAll();
-        hintController.UpdateHint();
     }
 
     // Update is called once per frame

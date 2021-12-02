@@ -10,6 +10,7 @@ public class HintController : MonoBehaviour
 
     public GameObject[] pieces;
     public Dragdrop[] dragdrops;
+    int indexHint = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,8 @@ public class HintController : MonoBehaviour
         {
             currentHint = PlayerPrefs.GetInt("Hint");
         }
+
+        UpdateHint();
     }
 
     // Update is called once per frame
@@ -35,32 +38,42 @@ public class HintController : MonoBehaviour
 
     public void UseHint()
     {
-        
-        int randomIndex = Random.Range(1, pieces.Length);
-
         if(currentHint > 0)
         {
-            currentHint -= Hint;
-            if (randomIndex == 1)
-            {
-                dragdrops[0].onPos = true;
-                dragdrops[0].OnMouseUp();
-            }
-            if (randomIndex == 2)
-            {
-                dragdrops[1].onPos = true;
-                dragdrops[1].OnMouseUp();
-            }
-            if (randomIndex == 3)
-            {
-                dragdrops[2].onPos = true;
-                dragdrops[2].OnMouseUp();
-            }
-            if (randomIndex == 4)
-            {
-                dragdrops[3].onPos = true;
-                dragdrops[3].OnMouseUp();
-            }
+            currentHint--;
+            PlayerPrefs.SetInt("Hint", currentHint);
+            indexHint++;
+            IndexHint();
+        }
+        else
+        {
+            currentHint = 0;
+            indexHint = pieces.Length;
+        }
+        
+    }
+
+    public void IndexHint()
+    {
+        if (indexHint == 1)
+        {
+            dragdrops[0].onPos = true;
+            dragdrops[0].OnMouseUp();
+        }
+        if (indexHint == 2)
+        {
+            dragdrops[1].onPos = true;
+            dragdrops[1].OnMouseUp();
+        }
+        if (indexHint == 3)
+        {
+            dragdrops[2].onPos = true;
+            dragdrops[2].OnMouseUp();
+        }
+        if (indexHint == 4)
+        {
+            dragdrops[3].onPos = true;
+            dragdrops[3].OnMouseUp();
         }
     }
 

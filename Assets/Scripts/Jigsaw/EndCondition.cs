@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EndCondition : MonoBehaviour
 {
     public GameObject puzzle;
+    public GameObject[] pos;
     public Text time, coin;
     [SerializeField]bool selesai = false;
 
@@ -31,7 +32,7 @@ public class EndCondition : MonoBehaviour
 
     public void CekPuzzle()
     {
-        for(int i = 0; i < 4; i++)
+        for(int i = 0; i < pos.Length; i++)
         {
             if (transform.GetChild(i).GetComponent<Dragdrop>().onTempel)
             {
@@ -41,7 +42,7 @@ public class EndCondition : MonoBehaviour
             else
             {
                 selesai = false;
-                i = 4;
+                i = pos.Length;
             }
         }
 
