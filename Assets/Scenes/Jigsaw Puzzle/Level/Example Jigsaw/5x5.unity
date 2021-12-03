@@ -1239,7 +1239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296d0f27888a11644bb7df88e250c3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endcondition: {fileID: 478685523}
+  winCondition: {fileID: 478685523}
   pausemenu: {fileID: 1580224542}
   puzzle: {fileID: 297431572}
   timeManager: {fileID: 2049461595}

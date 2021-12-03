@@ -31,18 +31,6 @@ public class Dragdrop : MonoBehaviour
         {
             Vector3 posMouse = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
             transform.position = new Vector3(posMouse.x, posMouse.y, -1);
-            if (SceneManager.GetActiveScene().name == "Level 1" || SceneManager.GetActiveScene().name == "Level 2")
-            {
-                transform.localScale = new Vector2(1f, 1f);
-            }
-            else if (SceneManager.GetActiveScene().name == "Level 3" || SceneManager.GetActiveScene().name == "Level 4")
-            {
-                transform.localScale = new Vector2(.8f, .8f);
-            }
-            else if (SceneManager.GetActiveScene().name == "Level 5")
-            {
-                transform.localScale = new Vector2(.6f, .6f);
-            }
         }
     }
 
@@ -50,13 +38,12 @@ public class Dragdrop : MonoBehaviour
     {
         if (onPos)
         {
-            transform.position = detector.transform.position;            
+            transform.position = detector.transform.position;
             onTempel = true;
         }
         else
         {
             transform.position = randomPos;
-            transform.localScale = new Vector2(1f, 1f);
             onTempel = false;
         }
     }
