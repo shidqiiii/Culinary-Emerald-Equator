@@ -8,8 +8,7 @@ public class HintController : MonoBehaviour
     public int currentHint = 0, Hint;
     public Text hintText;
 
-    public List<Dragdrop> list = new List<Dragdrop>();
-    
+    public List<Dragdrop> list = new List<Dragdrop>();    
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +17,8 @@ public class HintController : MonoBehaviour
         {
             currentHint = PlayerPrefs.GetInt("Hint");
         }
-
         UpdateHint();
-        
+
     }
 
     // Update is called once per frame
@@ -38,42 +36,30 @@ public class HintController : MonoBehaviour
 
     public void UseHintJigsaw()
     {
+        int randomIndex = Random.Range(0, list.Count);
+
         if (currentHint > 0)
         {
-            currentHint--;
-            PlayerPrefs.SetInt("Hint", currentHint);
-            IndexHint();
+            if (list[randomIndex].onTempel)
+            {
+                list.Remove(list[randomIndex]);
+                UseHintJigsaw();
+            }
+            else
+            {
+                list[randomIndex].onPos = true;
+                list[randomIndex].OnMouseUp();
+                list.Remove(list[randomIndex]);
+                currentHint--;
+            }
+            
         }
         else
         {
             currentHint = 0;
-        }
-
-    }
-
-    public void IndexHint()
-    {
-        /* if (dragdrops[i].onTempel)
-         {
-             dragdrops[i++].onPos = true;
-             dragdrops[i++].OnMouseUp();
-         }
-
-         dragdrops[i].onPos = true;
-         dragdrops[i].OnMouseUp();
-
-         */
-        if (list.Count > 0)
-        {
-            int randomIndex = Random.Range(0, list.Count);
-            list[randomIndex].onPos = true;
-            list[randomIndex].OnMouseUp();
-            list.Remove(list[randomIndex]);
-        }
-        else
-        {
             Debug.Log("The list is empty: ");
         }
 
+        PlayerPrefs.SetInt("Hint", currentHint);
     }
 }
