@@ -8,7 +8,9 @@ public class HintController : MonoBehaviour
     public int currentHint = 0, Hint;
     public Text hintText;
 
-    public List<Dragdrop> list = new List<Dragdrop>();    
+    public List<Dragdrop> list = new List<Dragdrop>();
+    public GameObject[] showNumber;
+    bool useHint;
 
     // Start is called before the first frame update
     void Start()
@@ -17,8 +19,8 @@ public class HintController : MonoBehaviour
         {
             currentHint = PlayerPrefs.GetInt("Hint");
         }
-        UpdateHint();
 
+        UpdateHint();
     }
 
     // Update is called once per frame
@@ -61,5 +63,31 @@ public class HintController : MonoBehaviour
         }
 
         PlayerPrefs.SetInt("Hint", currentHint);
+    }
+
+    public void UseHintSliding()
+    {
+        if(currentHint > 0)
+        {
+            if (!useHint)
+            {
+                foreach (GameObject number in showNumber)
+                {
+                    number.SetActive(true);
+                }
+                currentHint--;
+                useHint = true;
+            }
+            else
+                Debug.Log("you already used hint");
+
+        }
+        else
+        {
+            currentHint = 0;
+        }
+
+        PlayerPrefs.SetInt("Hint", currentHint);
+
     }
 }
