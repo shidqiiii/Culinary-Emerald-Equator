@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     public GameObject winCondition, pausemenu, puzzle;
 
     public TimeManager timeManager;
-    public EndCondition endCondition;
     public HintController hintController;
 
     public GameObject star1, star2, star3;
@@ -27,6 +26,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+    public void LoadScene(string _SceneName)
+    {
+        SceneManager.LoadScene(_SceneName);
+        Time.timeScale = 1f;
     }
 
     public void WinCondition()
@@ -55,16 +59,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ResetGame()
-    {
-        endCondition.ResetPuzzle();
-        puzzle.SetActive(true);
-        winCondition.SetActive(false);
-        pausemenu.SetActive(false); 
-        Time.timeScale = 1f;
-    }
-
-    public void TimeStar()
+    public void TimeStarJigsaw()
     {
         if (SceneManager.GetActiveScene().name == "Level 1" || SceneManager.GetActiveScene().name == "Level 2")
         {
@@ -75,52 +70,53 @@ public class GameManager : MonoBehaviour
 
         else if (SceneManager.GetActiveScene().name == "Level 3" || SceneManager.GetActiveScene().name == "Level 4")
         {
-            if (timeManager.currentTime < 60f)
+            if (timeManager.currentTime < 120f)
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(true);
             }
-            else if (timeManager.currentTime >= 60f && timeManager.currentTime < 120f)
+            else if (timeManager.currentTime >= 120f && timeManager.currentTime < 240f)
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(false);
             }
-            else if(timeManager.currentTime >= 120f)
+            else if(timeManager.currentTime >= 240f && timeManager.currentTime < 300f)
             {
                 star1.SetActive(true);
                 star2.SetActive(false);
                 star3.SetActive(false);
             }
-            else if (timeManager.currentTime >= 180f)
+            else if (timeManager.currentTime >= 300f)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(false);
             }
         }
+
         else if (SceneManager.GetActiveScene().name == "Level 5")
         {
-            if (timeManager.currentTime < 90f)
+            if (timeManager.currentTime < 300f)
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(true);
             }
-            else if (timeManager.currentTime >= 90f && timeManager.currentTime < 150f)
+            else if (timeManager.currentTime >= 300f && timeManager.currentTime < 480f)
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(false);
             }
-            else if (timeManager.currentTime >= 150f)
+            else if (timeManager.currentTime >= 480f && timeManager.currentTime < 600f)
             {
                 star1.SetActive(true);
                 star2.SetActive(false);
                 star3.SetActive(false);
             }
-            else if (timeManager.currentTime >= 240f)
+            else if (timeManager.currentTime >= 600f)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
@@ -130,10 +126,72 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void LoadScene(string _SceneName)
+    public void TimeStarSliding()
     {
-        SceneManager.LoadScene(_SceneName);
-        Time.timeScale = 1f;
+        if (SceneManager.GetActiveScene().name == "Level 1" || SceneManager.GetActiveScene().name == "Level 2")
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+        }
+
+        else if (SceneManager.GetActiveScene().name == "Level 3" || SceneManager.GetActiveScene().name == "Level 4")
+        {
+            if (timeManager.currentTime < 300f)
+            {
+                star1.SetActive(true);
+                star2.SetActive(true);
+                star3.SetActive(true);
+            }
+            else if (timeManager.currentTime >= 300f && timeManager.currentTime < 480f)
+            {
+                star1.SetActive(true);
+                star2.SetActive(true);
+                star3.SetActive(false);
+            }
+            else if (timeManager.currentTime >= 480f && timeManager.currentTime < 600f)
+            {
+                star1.SetActive(true);
+                star2.SetActive(false);
+                star3.SetActive(false);
+            }
+            else if (timeManager.currentTime >= 600f)
+            {
+                star1.SetActive(false);
+                star2.SetActive(false);
+                star3.SetActive(false);
+            }
+        }
+
+        else if (SceneManager.GetActiveScene().name == "Level 5")
+        {
+            if (timeManager.currentTime < 540f)
+            {
+                star1.SetActive(true);
+                star2.SetActive(true);
+                star3.SetActive(true);
+            }
+            else if (timeManager.currentTime >= 540f && timeManager.currentTime < 720f)
+            {
+                star1.SetActive(true);
+                star2.SetActive(true);
+                star3.SetActive(false);
+            }
+            else if (timeManager.currentTime >= 720f && timeManager.currentTime < 900f)
+            {
+                star1.SetActive(true);
+                star2.SetActive(false);
+                star3.SetActive(false);
+            }
+            else if (timeManager.currentTime >= 900f)
+            {
+                star1.SetActive(false);
+                star2.SetActive(false);
+                star3.SetActive(false);
+            }
+        }
+
     }
 
+    
 }

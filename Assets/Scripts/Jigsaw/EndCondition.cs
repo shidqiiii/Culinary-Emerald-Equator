@@ -50,28 +50,10 @@ public class EndCondition : MonoBehaviour
         {
             timeManager.timeActive = false;
             gameManager.WinCondition();
-            gameManager.TimeStar();
+            gameManager.TimeStarJigsaw();
             //singleLevel.UpdateStar();
             coinManager.UpdateCoin();
             coin.text = coinManager.coinText.text;
         }
     }
-
-    public void ResetPuzzle()
-    {
-        for (int i = 0; i < pos.Length; i++)
-        {
-            puzzle.transform.GetChild(i).GetComponent<Dragdrop>().onTempel = false;
-            puzzle.transform.GetChild(i).GetComponent<Dragdrop>().onPos = false;
-            puzzle.transform.GetChild(i).position = puzzle.transform.GetChild(i).GetComponent<Dragdrop>().randomPos;
-            puzzle.transform.GetChild(i).localScale = puzzle.transform.GetChild(i).GetComponent<Dragdrop>().scaleAwal;
-            timeManager.currentTime = 0;
-            timeManager.timeActive = true;
-        }
-
-        selesai = false;
-        puzzle.SetActive(true);
-    }
-
-    
 }

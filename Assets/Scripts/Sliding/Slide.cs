@@ -1,22 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Slide : MonoBehaviour
 {
     [SerializeField] Transform emptySpace = null;
     [SerializeField] public Tile[] tiles;
     [SerializeField] int emptySpaceIndex = 8;
+    [SerializeField] int IndexTile = 7;
 
+    public GameObject puzzle;
+    public Text time, coin;
+    [SerializeField] bool selesai = false;
+
+    public TimeManager timeManager;
+    public SingleLevel singleLevel;
+    public CoinManager coinManager;
+    public GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Shuffle();
+        Shuffle();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        Sliding();
+
+        if (!selesai)
+        {
+            CekPuzzle();
+        }
+    }
+
+    void Sliding()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -37,26 +57,7 @@ public class Slide : MonoBehaviour
                 }
             }
         }
-
-        int correctTiles = 0;
-        foreach (var a in tiles)
-        {
-            if (a != null)
-            {
-                if (a.inRightPlace)
-                {
-                    correctTiles++;
-                }
-            }
-        }
-
-        if(correctTiles == tiles.Length - 1)
-        {
-            Debug.Log("You Win");
-        }
     }
-
-    
 
 
     public void Shuffle()
@@ -64,10 +65,10 @@ public class Slide : MonoBehaviour
         int invertion;
         do
         {
-            for (int i = 0; i <= 7; i++)
+            for (int i = 0; i <= IndexTile; i++)
             {
                 var lastPos = tiles[i].targetPosition;
-                int randomIndex = Random.Range(0, 7);
+                int randomIndex = Random.Range(0, IndexTile);
                 tiles[i].targetPosition = tiles[randomIndex].targetPosition;
                 tiles[randomIndex].targetPosition = lastPos;
                 var tile = tiles[i];
@@ -113,5 +114,37 @@ public class Slide : MonoBehaviour
             inversionsSum += thisTileInvertion;
         }
         return inversionsSum;
+    }
+
+    public void CekPuzzle()
+    {
+        int correctTiles = 0;
+        foreach (var a in tiles)
+        {
+            if (a != null)
+            {
+                if (a.inRightPlace)
+                {
+                    correctTiles++;
+                }
+            }
+        }
+
+        if (correctTiles == tiles.Length - 1)
+        {
+            selesai = true;
+            time.text = timeManager.timeText.text;
+            Debug.Log("You Win");
+        }
+
+        if (selesai)
+        {
+            timeManager.timeActive = false;
+            gameManager.WinCondition();
+            gameManager.TimeStarSliding();
+            //singleLevel.UpdateStar();
+            coinManager.UpdateCoin();
+            coin.text = coinManager.coinText.text;
+        }
     }
 }
