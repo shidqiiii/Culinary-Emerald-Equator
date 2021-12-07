@@ -44,7 +44,7 @@ public class Slide : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
             if (hit)
             {
-                if (Vector2.Distance(emptySpace.position, hit.transform.position) < 1)
+                if (Vector2.Distance(emptySpace.position, hit.transform.position) < .7)
                 {
                     Vector2 lastEmptySpacePosition = emptySpace.position;
                     Tile thisTile = hit.transform.GetComponent<Tile>();
