@@ -275,6 +275,30 @@ PrefabInstance:
       propertyPath: coinText
       value: 
       objectReference: {fileID: 360456943}
+    - target: {fileID: 7472738598465110709, guid: 30d43dd6f006359458e3bcfa8338ccdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7472738598465110709, guid: 30d43dd6f006359458e3bcfa8338ccdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1236837413}
+    - target: {fileID: 7472738598465110709, guid: 30d43dd6f006359458e3bcfa8338ccdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7472738598465110709, guid: 30d43dd6f006359458e3bcfa8338ccdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMap, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7472738598465110709, guid: 30d43dd6f006359458e3bcfa8338ccdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Menu Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 7472738598465110709, guid: 30d43dd6f006359458e3bcfa8338ccdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7472738599272190518, guid: 30d43dd6f006359458e3bcfa8338ccdf, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

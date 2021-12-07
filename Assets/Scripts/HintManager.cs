@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HintController : MonoBehaviour
+public class HintManager : MonoBehaviour
 {
     public int currentHint = 0, Hint;
     public Text hintText;

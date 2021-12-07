@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -10,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject winCondition, pausemenu, puzzle;
 
     public TimeManager timeManager;
-    public HintController hintController;
+    public HintManager hintManager;
 
     public GameObject star1, star2, star3;
 
