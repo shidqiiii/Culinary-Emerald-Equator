@@ -61,66 +61,75 @@ public class GameManager : MonoBehaviour
 
     public void TimeStarJigsaw()
     {
-        if (SceneManager.GetActiveScene().name == "Level 1" || SceneManager.GetActiveScene().name == "Level 2")
+        if (SceneManager.GetActiveScene().name == "Level 1 Jigsaw" || SceneManager.GetActiveScene().name == "Level 2 Jigsaw")
         {
             star1.SetActive(true);
             star2.SetActive(true);
             star3.SetActive(true);
+            SingleLevelJigsaw.instance.TimeStar(1);
         }
 
-        else if (SceneManager.GetActiveScene().name == "Level 3" || SceneManager.GetActiveScene().name == "Level 4")
+        else if (SceneManager.GetActiveScene().name == "Level 3 Jigsaw" || SceneManager.GetActiveScene().name == "Level 4 Jigsaw")
         {
             if (timeManager.currentTime < 120f)
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(true);
+                SingleLevelJigsaw.instance.TimeStar(1);
             }
             else if (timeManager.currentTime >= 120f && timeManager.currentTime < 240f)
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(false);
+                SingleLevelJigsaw.instance.TimeStar(2);
             }
             else if(timeManager.currentTime >= 240f && timeManager.currentTime < 300f)
             {
                 star1.SetActive(true);
                 star2.SetActive(false);
                 star3.SetActive(false);
+                SingleLevelJigsaw.instance.TimeStar(3);
             }
             else if (timeManager.currentTime >= 300f)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(false);
+                SingleLevelJigsaw.instance.TimeStar(4);
             }
         }
 
-        else if (SceneManager.GetActiveScene().name == "Level 5")
+        else if (SceneManager.GetActiveScene().name == "Level 5 Jigsaw")
         {
             if (timeManager.currentTime < 300f)
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(true);
+                SingleLevelJigsaw.instance.TimeStar(1);
             }
             else if (timeManager.currentTime >= 300f && timeManager.currentTime < 480f)
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(false);
+                SingleLevelJigsaw.instance.TimeStar(2);
             }
             else if (timeManager.currentTime >= 480f && timeManager.currentTime < 600f)
             {
                 star1.SetActive(true);
                 star2.SetActive(false);
                 star3.SetActive(false);
+                SingleLevelJigsaw.instance.TimeStar(3);
             }
             else if (timeManager.currentTime >= 600f)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(false);
+                SingleLevelJigsaw.instance.TimeStar(4);
             }
         }
         
@@ -128,14 +137,14 @@ public class GameManager : MonoBehaviour
 
     public void TimeStarSliding()
     {
-        if (SceneManager.GetActiveScene().name == "Level 1" || SceneManager.GetActiveScene().name == "Level 2")
+        if (SceneManager.GetActiveScene().name == "Level 1 Sliding" || SceneManager.GetActiveScene().name == "Level 2 Sliding")
         {
             star1.SetActive(true);
             star2.SetActive(true);
             star3.SetActive(true);
         }
 
-        else if (SceneManager.GetActiveScene().name == "Level 3" || SceneManager.GetActiveScene().name == "Level 4")
+        else if (SceneManager.GetActiveScene().name == "Level 3 Sliding" || SceneManager.GetActiveScene().name == "Level 4 Sliding")
         {
             if (timeManager.currentTime < 300f)
             {
@@ -163,7 +172,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        else if (SceneManager.GetActiveScene().name == "Level 5")
+        else if (SceneManager.GetActiveScene().name == "Level 5 Sliding")
         {
             if (timeManager.currentTime < 540f)
             {

@@ -458,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7329989159928654180, guid: 564ab51ac5108a145a504f5097344e34, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7329989159928654180, guid: 564ab51ac5108a145a504f5097344e34, type: 3}
       propertyPath: m_AnchorMax.x
@@ -625,6 +625,11 @@ PrefabInstance:
 --- !u!224 &86541213 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7329989159928654180, guid: 564ab51ac5108a145a504f5097344e34, type: 3}
+  m_PrefabInstance: {fileID: 86541212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &86541214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7329989159928654171, guid: 564ab51ac5108a145a504f5097344e34, type: 3}
   m_PrefabInstance: {fileID: 86541212}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &91969350 stripped
@@ -1414,6 +1419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 193788536}
   - component: {fileID: 193788535}
+  - component: {fileID: 193788537}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1435,10 +1441,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winCondition: {fileID: 478685523}
   pausemenu: {fileID: 1580224542}
-  info: {fileID: 0}
+  info: {fileID: 86541214}
   puzzle: {fileID: 297431572}
-  timeManager: {fileID: 0}
-  hintManager: {fileID: 0}
+  timeManager: {fileID: 1866882421}
+  hintManager: {fileID: 1866882420}
   star1: {fileID: 14142331}
   star2: {fileID: 597310402}
   star3: {fileID: 74160460}
@@ -1457,6 +1463,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &193788537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193788534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d7d397a927dd844ada69a40303287a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStarsNum: 0
+  _starsNum: 0
+  levelIndex: 5
 --- !u!1 &200839216
 GameObject:
   m_ObjectHideFlags: 0
@@ -12340,6 +12361,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5848739481298140381, guid: 13ec1945f40b14c41a93fc556ad0df86, type: 3}
   m_PrefabInstance: {fileID: 1866882418}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1866882420 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5848739480389485009, guid: 13ec1945f40b14c41a93fc556ad0df86, type: 3}
+  m_PrefabInstance: {fileID: 1866882418}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21194ba22f9fdfa42b1826720303a735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1866882421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5848739479343634667, guid: 13ec1945f40b14c41a93fc556ad0df86, type: 3}
+  m_PrefabInstance: {fileID: 1866882418}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac4329d14e4b844ba6a3e918bdcc370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1907440842
 GameObject:
   m_ObjectHideFlags: 0

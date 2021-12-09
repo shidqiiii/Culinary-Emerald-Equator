@@ -795,7 +795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winCondition: {fileID: 294514592940888431}
   pausemenu: {fileID: 1580224542}
-  info: {fileID: 0}
+  info: {fileID: 445053036}
   puzzle: {fileID: 207466818}
   timeManager: {fileID: 480197177}
   hintManager: {fileID: 480197176}
@@ -1535,6 +1535,11 @@ PrefabInstance:
 --- !u!224 &445053035 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7329989159928654180, guid: 564ab51ac5108a145a504f5097344e34, type: 3}
+  m_PrefabInstance: {fileID: 445053034}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &445053036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7329989159928654171, guid: 564ab51ac5108a145a504f5097344e34, type: 3}
   m_PrefabInstance: {fileID: 445053034}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &454175545

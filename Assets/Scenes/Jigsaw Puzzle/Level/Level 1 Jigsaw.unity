@@ -650,6 +650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 193788536}
   - component: {fileID: 193788535}
+  - component: {fileID: 193788537}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -671,7 +672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winCondition: {fileID: 478685523}
   pausemenu: {fileID: 1580224542}
-  info: {fileID: 0}
+  info: {fileID: 1611105955}
   puzzle: {fileID: 297431572}
   timeManager: {fileID: 2049461595}
   hintManager: {fileID: 945280097}
@@ -693,6 +694,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &193788537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193788534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d7d397a927dd844ada69a40303287a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStarsNum: 0
+  _starsNum: 0
+  levelIndex: 1
 --- !u!1 &227806085
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,7 +928,7 @@ MonoBehaviour:
   coin: {fileID: 1709388115}
   selesai: 0
   timeManager: {fileID: 2049461595}
-  singleLevel: {fileID: 0}
+  singleLevelJigsaw: {fileID: 193788537}
   coinManager: {fileID: 1640460714}
   gameManager: {fileID: 193788535}
 --- !u!1 &324688175
@@ -4355,6 +4371,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6054850444587577018, guid: 61f5511b3d8316e449487c796d91da78, type: 3}
   m_PrefabInstance: {fileID: 6054850445228277413}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1611105955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7329989159928654171, guid: 564ab51ac5108a145a504f5097344e34, type: 3}
+  m_PrefabInstance: {fileID: 1750840450}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1614979540
 GameObject:
   m_ObjectHideFlags: 0
@@ -4785,7 +4806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7329989159928654180, guid: 564ab51ac5108a145a504f5097344e34, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7329989159928654180, guid: 564ab51ac5108a145a504f5097344e34, type: 3}
       propertyPath: m_AnchorMax.x

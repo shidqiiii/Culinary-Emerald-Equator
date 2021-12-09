@@ -960,6 +960,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7329989159928654180, guid: 564ab51ac5108a145a504f5097344e34, type: 3}
   m_PrefabInstance: {fileID: 192365044}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &192365046 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7329989159928654171, guid: 564ab51ac5108a145a504f5097344e34, type: 3}
+  m_PrefabInstance: {fileID: 192365044}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &193788534
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,7 +996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winCondition: {fileID: 294514592940888431}
   pausemenu: {fileID: 1580224542}
-  info: {fileID: 0}
+  info: {fileID: 192365046}
   puzzle: {fileID: 207466818}
   timeManager: {fileID: 1627482774}
   hintManager: {fileID: 1627482773}
