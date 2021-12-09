@@ -16,9 +16,9 @@ public class Slide : MonoBehaviour
     [SerializeField] bool selesai = false;
 
     public TimeManager timeManager;
-    public SingleLevel singleLevel;
     public CoinManager coinManager;
     public GameManager gameManager;
+    public SingleLevelSliding singleLevelSliding;
 
     // Start is called before the first frame update
     void Start()
@@ -143,7 +143,7 @@ public class Slide : MonoBehaviour
             timeManager.timeActive = false;
             gameManager.WinCondition();
             gameManager.TimeStarSliding();
-            //singleLevel.UpdateStar();
+            singleLevelSliding.UpdateStar();
             coinManager.UpdateCoin();
             coin.text = coinManager.coinText.text;
         }

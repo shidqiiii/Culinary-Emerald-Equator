@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class LevelSelect : MonoBehaviour
+public class LevelSelectSliding : MonoBehaviour
 {
-    [SerializeField] private bool unlocked;
+    [SerializeField] bool unlocked;
     public Image unlockImage;
     public GameObject[] stars;
 
@@ -15,7 +15,7 @@ public class LevelSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //PlayerPrefs.DeleteAll();
+
     }
 
     // Update is called once per frame
@@ -25,17 +25,26 @@ public class LevelSelect : MonoBehaviour
         UpdateLevelStatus();
     }
 
+    void UpdateLevelStatus()
+    {
+        int previousLevelNum = int.Parse(gameObject.name) - 1;
+        if (PlayerPrefs.GetInt("Sliding Lv" + previousLevelNum) > 0)
+        {
+            unlocked = true;
+        }
+    }
+
     void UpdateLevelImage()
     {
         if (!unlocked)
         {
             unlockImage.gameObject.SetActive(true);
-            for(int i = 0; i < stars.Length; i++)
+            for (int i = 0; i < stars.Length; i++)
             {
                 stars[i].gameObject.SetActive(false);
             }
         }
-        else //if unlock is true, level can play
+        else
         {
             unlockImage.gameObject.SetActive(false);
             for (int i = 0; i < stars.Length; i++)
@@ -43,27 +52,18 @@ public class LevelSelect : MonoBehaviour
                 stars[i].gameObject.SetActive(true);
             }
 
-            for(int i = 0; i < PlayerPrefs.GetInt("Lv" + gameObject.name); i++)
+            for (int i = 0; i < PlayerPrefs.GetInt("Sliding Lv" + gameObject.name); i++)
             {
                 stars[i].gameObject.GetComponent<Image>().sprite = starSprite;
             }
         }
     }
 
-    void UpdateLevelStatus()
-    {
-        int PreviousLevelNum = int.Parse(gameObject.name) - 1;
-        if (PlayerPrefs.GetInt("Lv" + PreviousLevelNum) > 0)
-        {
-            unlocked = true;
-        }
-    }
-
-    public void SelectLevel(string _levelName)
+    public void LoadScene(string scene)
     {
         if (unlocked)
         {
-            SceneManager.LoadScene(_levelName);
+            SceneManager.LoadScene(scene);
         }
     }
 }

@@ -18,8 +18,6 @@ public class SelectStage : MonoBehaviour
         
     }
 
-    
-
     public void LoadScene(string scene)
     {
         SceneManager.LoadScene(scene);

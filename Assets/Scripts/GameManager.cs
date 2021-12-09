@@ -142,6 +142,7 @@ public class GameManager : MonoBehaviour
             star1.SetActive(true);
             star2.SetActive(true);
             star3.SetActive(true);
+            SingleLevelSliding.instance.TimeStar(1);
         }
 
         else if (SceneManager.GetActiveScene().name == "Level 3 Sliding" || SceneManager.GetActiveScene().name == "Level 4 Sliding")
@@ -151,24 +152,28 @@ public class GameManager : MonoBehaviour
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(true);
+                SingleLevelSliding.instance.TimeStar(1);
             }
             else if (timeManager.currentTime >= 300f && timeManager.currentTime < 480f)
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(false);
+                SingleLevelSliding.instance.TimeStar(2);
             }
             else if (timeManager.currentTime >= 480f && timeManager.currentTime < 600f)
             {
                 star1.SetActive(true);
                 star2.SetActive(false);
                 star3.SetActive(false);
+                SingleLevelSliding.instance.TimeStar(3);
             }
             else if (timeManager.currentTime >= 600f)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(false);
+                SingleLevelSliding.instance.TimeStar(4);
             }
         }
 
@@ -179,24 +184,28 @@ public class GameManager : MonoBehaviour
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(true);
+                SingleLevelSliding.instance.TimeStar(1);
             }
             else if (timeManager.currentTime >= 540f && timeManager.currentTime < 720f)
             {
                 star1.SetActive(true);
                 star2.SetActive(true);
                 star3.SetActive(false);
+                SingleLevelSliding.instance.TimeStar(2);
             }
             else if (timeManager.currentTime >= 720f && timeManager.currentTime < 900f)
             {
                 star1.SetActive(true);
                 star2.SetActive(false);
                 star3.SetActive(false);
+                SingleLevelSliding.instance.TimeStar(3);
             }
             else if (timeManager.currentTime >= 900f)
             {
                 star1.SetActive(false);
                 star2.SetActive(false);
                 star3.SetActive(false);
+                SingleLevelSliding.instance.TimeStar(4);
             }
         }
 
