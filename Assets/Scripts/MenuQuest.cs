@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuQuest : MonoBehaviour
 {
@@ -14,5 +15,10 @@ public class MenuQuest : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void LoadScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 }
