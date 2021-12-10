@@ -923,7 +923,7 @@ MonoBehaviour:
   coin: {fileID: 1709388115}
   selesai: 0
   timeManager: {fileID: 891800363}
-  singleLevel: {fileID: 0}
+  singleLevelJigsaw: {fileID: 193788537}
   coinManager: {fileID: 1640460714}
   gameManager: {fileID: 193788535}
 --- !u!1 &324688175
