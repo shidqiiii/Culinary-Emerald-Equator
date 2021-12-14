@@ -1,50 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestManager : MonoBehaviour
 {
-    public bool unlocked;
-
-    CoinManager coinManager;
-    HintManager hintManager;
+    public Button button;
+    public bool unlocked, hasClaim;
+    public int coin, hint;
+    
+    public CoinManager coinManager;
+    public HintManager hintManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    void Achievement(int reward)
+    public void Achievement()
     {
-        switch (reward)
+        if (unlocked)
         {
-            case 1:
-                coinManager.currentCoin += 500;
-                break;
+            if (!hasClaim)
+            {
+                coinManager.currentCoin += coin;
+                hintManager.currentHint += hint;
 
-            case 2:
-                coinManager.currentCoin += 1000;
-                break;
+                PlayerPrefs.SetInt("Coin", coinManager.currentCoin);
+                PlayerPrefs.SetInt("Hint", hintManager.currentHint);
 
-            case 3:
-                hintManager.currentHint += 3;
-                break;
-
-            case 4:
-                coinManager.currentCoin += 1000;
-                break;
-
-            case 5:
-                coinManager.currentCoin += 500;
-                break;
-
+                hasClaim = true;
+            }
+            
+        }
+        else
+        {
+            Debug.Log("nothing");
         }
     }
 }
