@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuQuest : MonoBehaviour
 {
+    public Button[] button;
     public QuestManager[] questManagers; 
     public GameObject[] lockImages;
     public Text[] texts;
@@ -37,6 +38,7 @@ public class MenuQuest : MonoBehaviour
     void Update()
     {
         QuestHistory();
+        ButtonInteractable();
     }
 
     void QuestHistory()
@@ -53,6 +55,23 @@ public class MenuQuest : MonoBehaviour
             questManagers[4].unlocked = true;
             texts[4].text = BuyHint.ToString() + "/ 5";
         }
+    }
+
+    public void HasClaim()
+    {
+        if (questManagers[2].hasClaim)
+        {
+            PlayerPrefs.SetInt("hasClaim2", 1);
+        }
+    }
+
+    void ButtonInteractable()
+    {
+        if(PlayerPrefs.GetInt("hasClaim2") == 1)
+        {
+            button[2].interactable = false;
+        }
+        
     }
 
     public void LoadScene(string scene)

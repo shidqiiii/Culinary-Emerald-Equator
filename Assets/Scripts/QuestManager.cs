@@ -11,6 +11,7 @@ public class QuestManager : MonoBehaviour
     
     public CoinManager coinManager;
     public HintManager hintManager;
+    public MenuQuest menuQuest;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class QuestManager : MonoBehaviour
                 PlayerPrefs.SetInt("Hint", hintManager.currentHint);
 
                 hasClaim = true;
+                menuQuest.HasClaim();
             }
             
         }
