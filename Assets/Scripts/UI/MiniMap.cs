@@ -30,7 +30,7 @@ public class MiniMap : MonoBehaviour
     void UpdateStarsUIJigsaw()
     {
         int sum = 0;
-        for(int i = 0; i < 5; i++)
+        for(int i = 0; i < 6; i++)
         {
             sum += PlayerPrefs.GetInt("Jigsaw Lv" + i.ToString());
         }
@@ -41,7 +41,7 @@ public class MiniMap : MonoBehaviour
     void UpdateStarsUISliding()
     {
         int sum = 0;
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 6; i++)
         {
             sum += PlayerPrefs.GetInt("Sliding Lv" + i.ToString());
         }
