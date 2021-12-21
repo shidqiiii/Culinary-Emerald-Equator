@@ -11,7 +11,7 @@ public class MenuQuest : MonoBehaviour
     public GameObject[] lockImages;
     public Text[] texts;
 
-    public int jigsawLevel, slidingLevel, HintUse, BuyHint;
+    public int jigsawLevel, slidingLevel, HintUse, BuyHint, stars;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +32,9 @@ public class MenuQuest : MonoBehaviour
         {
             BuyHint = PlayerPrefs.GetInt("BuyHint");
         }
+
+        stars = PlayerPrefs.GetInt("Jigsaw Lv" + 1) + PlayerPrefs.GetInt("Jigsaw Lv" + 2) + PlayerPrefs.GetInt("Jigsaw Lv" + 3) + PlayerPrefs.GetInt("Jigsaw Lv" + 4) + PlayerPrefs.GetInt("Jigsaw Lv" + 5) +
+            PlayerPrefs.GetInt("Sliding Lv" + 1) + PlayerPrefs.GetInt("Sliding Lv" + 2) + PlayerPrefs.GetInt("Sliding Lv" + 3) + PlayerPrefs.GetInt("Sliding Lv" + 4) + PlayerPrefs.GetInt("Sliding Lv" + 5);
     }
 
     // Update is called once per frame
@@ -49,6 +52,12 @@ public class MenuQuest : MonoBehaviour
             questManagers[2].unlocked = true;
             texts[2].text = HintUse.ToString() + "/ 10";
         }
+        if (stars >= 15)
+        {
+            lockImages[3].SetActive(false);
+            questManagers[3].unlocked = true;
+            texts[3].text = stars.ToString() + "/ 15";
+        }
         if (PlayerPrefs.GetInt("BuyHint") >= 5)
         {
             lockImages[4].SetActive(false);
@@ -59,19 +68,50 @@ public class MenuQuest : MonoBehaviour
 
     public void HasClaim()
     {
+        if (questManagers[0].hasClaim)
+        {
+            PlayerPrefs.SetInt("hasClaim", 1);
+        }
+        if (questManagers[1].hasClaim)
+        {
+            PlayerPrefs.SetInt("hasClaim1", 1);
+        }
         if (questManagers[2].hasClaim)
         {
             PlayerPrefs.SetInt("hasClaim2", 1);
+        }
+        if (questManagers[3].hasClaim)
+        {
+            PlayerPrefs.SetInt("hasClaim3", 1);
+        }
+        if (questManagers[4].hasClaim)
+        {
+            PlayerPrefs.SetInt("hasClaim4", 1);
         }
     }
 
     void ButtonInteractable()
     {
-        if(PlayerPrefs.GetInt("hasClaim2") == 1)
+        if (PlayerPrefs.GetInt("hasClaim") == 1)
+        {
+            button[0].interactable = false;
+        }
+        if (PlayerPrefs.GetInt("hasClaim1") == 1)
+        {
+            button[1].interactable = false;
+        }
+        if (PlayerPrefs.GetInt("hasClaim2") == 1)
         {
             button[2].interactable = false;
         }
-        
+        if (PlayerPrefs.GetInt("hasClaim3") == 1)
+        {
+            button[3].interactable = false;
+        }
+        if (PlayerPrefs.GetInt("hasClaim4") == 1)
+        {
+            button[4].interactable = false;
+        }
     }
 
     public void LoadScene(string scene)

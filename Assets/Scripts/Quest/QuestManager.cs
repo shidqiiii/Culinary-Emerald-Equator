@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class QuestManager : MonoBehaviour
 {
-    public Button button;
+    public Text text;
+    public GameObject popup;
     public bool unlocked, hasClaim;
     public int coin, hint;
+    public string reward;
     
     public CoinManager coinManager;
     public HintManager hintManager;
@@ -39,6 +41,9 @@ public class QuestManager : MonoBehaviour
 
                 hasClaim = true;
                 menuQuest.HasClaim();
+
+                popup.SetActive(true);
+                text.text = reward;
             }
             
         }
