@@ -31,6 +31,7 @@ public class Dragdrop : MonoBehaviour
         {
             Vector3 posMouse = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
             transform.position = new Vector3(posMouse.x, posMouse.y, -1);
+            transform.localScale = new Vector2(1f, 1f);
         }
     }
 
@@ -40,11 +41,13 @@ public class Dragdrop : MonoBehaviour
         {
             transform.position = detector.transform.position;
             onTempel = true;
+            transform.localScale = scaleAwal;
         }
         else
         {
             transform.position = randomPos;
             onTempel = false;
+            transform.localScale = scaleAwal;
         }
     }
 
