@@ -46,6 +46,18 @@ public class MenuQuest : MonoBehaviour
 
     void QuestHistory()
     {
+        if ((PlayerPrefs.GetInt("Jigsaw Lv" + 5) > 2) || (PlayerPrefs.GetInt("Sliding Lv" + 5) > 2))
+        {
+            lockImages[0].SetActive(false);
+            questManagers[0].unlocked = true;
+            texts[0].text = "1/1";
+        }
+        if ((PlayerPrefs.GetInt("Jigsaw Lv" + 45) > 2) || (PlayerPrefs.GetInt("Sliding Lv" + 45) > 2))
+        {
+            lockImages[1].SetActive(false);
+            questManagers[1].unlocked = true;
+            texts[1].text = "1/1";
+        }
         if (PlayerPrefs.GetInt("HintUse") >= 10)
         {
             lockImages[2].SetActive(false);
