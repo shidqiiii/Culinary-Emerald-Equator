@@ -2079,7 +2079,7 @@ MonoBehaviour:
   CoinsSprite: {fileID: 21300000, guid: d9bcfaa372eafa0428d1b498b97edc3c, type: 3}
   HintSprite: {fileID: 21300000, guid: 68815cab3482f88409ba37465521c09e, type: 3}
   rewardsDB: {fileID: 11400000, guid: f6f157ae56ce0a14ea3af35cee77fcbf, type: 2}
-  nextRewardDelay: 10
+  nextRewardDelay: 23
   checkForRewardDelay: 2
 --- !u!1001 &1279537156
 PrefabInstance:
