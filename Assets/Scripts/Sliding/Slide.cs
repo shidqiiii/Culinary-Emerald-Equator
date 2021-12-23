@@ -12,7 +12,7 @@ public class Slide : MonoBehaviour
     [SerializeField] double vectordistance = 1.5;
 
     public GameObject puzzle;
-    public Text time, coin;
+    public Text time;
     [SerializeField] bool selesai = false;
 
     public TimeManager timeManager;
@@ -145,7 +145,6 @@ public class Slide : MonoBehaviour
             gameManager.TimeStarSliding();
             singleLevelSliding.UpdateStar();
             coinManager.UpdateCoin();
-            coin.text = coinManager.coinText.text;
         }
     }
 }

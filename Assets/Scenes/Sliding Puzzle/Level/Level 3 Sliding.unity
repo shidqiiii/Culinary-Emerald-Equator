@@ -1243,7 +1243,6 @@ MonoBehaviour:
   vectordistance: 1
   puzzle: {fileID: 207466818}
   time: {fileID: 294514592940888432}
-  coin: {fileID: 294514592940888433}
   selesai: 0
   timeManager: {fileID: 1627482774}
   coinManager: {fileID: 1075829015}
@@ -6908,6 +6907,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 294514593397104497, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
+      propertyPath: m_Text
+      value: +200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
 --- !u!1 &294514592940888431 stripped
@@ -6918,17 +6921,6 @@ GameObject:
 --- !u!114 &294514592940888432 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 294514592592784512, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
-  m_PrefabInstance: {fileID: 294514592940888430}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &294514592940888433 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 294514593397104497, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
   m_PrefabInstance: {fileID: 294514592940888430}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

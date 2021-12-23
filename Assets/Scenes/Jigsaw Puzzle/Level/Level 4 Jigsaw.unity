@@ -1878,7 +1878,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   time: {fileID: 524082441}
-  coin: {fileID: 1709388115}
   selesai: 0
   timeManager: {fileID: 1052007560}
   singleLevelJigsaw: {fileID: 193788537}
@@ -7985,17 +7984,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d87719827d8fb04f8eae97c8be04852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1709388115 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 294514593397104497, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
-  m_PrefabInstance: {fileID: 294514592940888430}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1738764588
 GameObject:
   m_ObjectHideFlags: 0
@@ -9690,6 +9678,10 @@ PrefabInstance:
     - target: {fileID: 294514593121949537, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 294514593397104497, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
+      propertyPath: m_Text
+      value: +200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}

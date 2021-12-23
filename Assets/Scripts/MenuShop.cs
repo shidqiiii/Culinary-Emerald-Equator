@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MenuShop : MonoBehaviour
 {
     public HintManager hintManager;
     public CoinManager coinManager;
+
+    public GameObject popup;
+    public Text textHint;
 
     int coin, hint, BuyHint;
 
@@ -76,6 +80,8 @@ public class MenuShop : MonoBehaviour
             PlayerPrefs.SetInt("Coin", coinManager.currentCoin);
             PlayerPrefs.SetInt("Hint", hintManager.currentHint);
             PlayerPrefs.SetInt("BuyHint", BuyHint);
+            popup.SetActive(true);
+            textHint.text = hint.ToString();
         }
         else
         {

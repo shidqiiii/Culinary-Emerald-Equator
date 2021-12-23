@@ -7,7 +7,7 @@ public class EndCondition : MonoBehaviour
 {
     public GameObject puzzle;
     public GameObject[] pos;
-    public Text time, coin;
+    public Text time;
     [SerializeField]bool selesai = false;
 
     public TimeManager timeManager;
@@ -53,7 +53,6 @@ public class EndCondition : MonoBehaviour
             gameManager.TimeStarJigsaw();
             singleLevelJigsaw.UpdateStar();
             coinManager.UpdateCoin();
-            coin.text = coinManager.coinText.text;
         }
     }
 }
