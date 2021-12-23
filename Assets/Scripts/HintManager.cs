@@ -10,7 +10,17 @@ public class HintManager : MonoBehaviour
 
     public List<Dragdrop> list = new List<Dragdrop>();
     public GameObject[] showNumber;
-    bool useHint;
+    bool useHint, getHint;
+
+    private void Awake()
+    {
+        if (PlayerPrefs.GetInt("getHint") == 1)
+        {
+            getHint = true;
+            PlayerPrefs.SetInt("getHint", 0);
+            Debug.Log("you've got a hint");
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +34,12 @@ public class HintManager : MonoBehaviour
             HintUse = PlayerPrefs.GetInt("HintUse");
         }
 
-        UpdateHint();
+        if (!getHint)
+        {
+            UpdateHint();
+            PlayerPrefs.SetInt("getHint", 1);
+        }
+        
     }
 
     // Update is called once per frame
