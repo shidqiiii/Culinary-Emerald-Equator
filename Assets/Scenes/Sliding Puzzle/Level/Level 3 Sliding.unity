@@ -5605,6 +5605,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 31a01efe2c5560f45a2c6c1eee5ec9a4, type: 3}
+    - target: {fileID: 7869603047956867917, guid: 3bca95ccd5169bc469673690f696fa27, type: 3}
+      propertyPath: m_Text
+      value: CIREBON
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bca95ccd5169bc469673690f696fa27, type: 3}
 --- !u!224 &1627482772 stripped

@@ -215,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHint: 0
   Hint: 1
+  HintUse: 0
   hintText: {fileID: 1415108567278936180}
   list: []
   showNumber: []
