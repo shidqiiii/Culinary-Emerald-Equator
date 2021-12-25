@@ -652,6 +652,7 @@ GameObject:
   - component: {fileID: 177656743}
   - component: {fileID: 177656746}
   - component: {fileID: 177656745}
+  - component: {fileID: 177656744}
   m_Layer: 5
   m_Name: Hint
   m_TagString: Untagged
@@ -679,6 +680,24 @@ RectTransform:
   m_AnchoredPosition: {x: -494.99994, y: -59.618225}
   m_SizeDelta: {x: 300.8147, y: 154.32324}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &177656744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177656742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21194ba22f9fdfa42b1826720303a735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHint: 0
+  Hint: 0
+  HintUse: 0
+  hintText: {fileID: 1146624864}
+  list: []
+  showNumber: []
 --- !u!114 &177656745
 MonoBehaviour:
   m_ObjectHideFlags: 0

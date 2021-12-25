@@ -1359,9 +1359,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLabel: {fileID: 83258646}
   timerButton: {fileID: 1720073010}
-  hours: 0
+  hours: 23
   minutes: 0
-  seconds: 10
+  seconds: 0
 --- !u!1 &1738020858
 GameObject:
   m_ObjectHideFlags: 0
