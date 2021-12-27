@@ -81,7 +81,7 @@ public class MenuShop : MonoBehaviour
             PlayerPrefs.SetInt("Hint", hintManager.currentHint);
             PlayerPrefs.SetInt("BuyHint", BuyHint);
             popup.SetActive(true);
-            textHint.text = hint.ToString();
+            textHint.text = hint.ToString() + " Hint";
         }
         else
         {

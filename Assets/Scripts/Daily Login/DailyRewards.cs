@@ -26,20 +26,11 @@ namespace DailyRewardSystem
 
 		[Space]
 		[Header("Reward UI")]
-		[SerializeField] GameObject rewardsCanvas;
-		[SerializeField] Button openButton;
-		[SerializeField] Button closeButton;
-		[SerializeField] Image rewardImage;
 		[SerializeField] Text rewardAmountText;
 		[SerializeField] Button claimButton;
 		[SerializeField] GameObject rewardsNotification;
 		[SerializeField] GameObject noMoreRewardsPanel;
-
-
-		[Space]
-		[Header("Rewards Images")]
-		[SerializeField] Sprite CoinsSprite;
-		[SerializeField] Sprite HintSprite;
+		[SerializeField] Text nextReward;
 
 		[Space]
 		[Header("Rewards Database")]
@@ -74,16 +65,9 @@ namespace DailyRewardSystem
 		{
 			nextRewardIndex = PlayerPrefs.GetInt("Next_Reward_Index", 0);
 
-			//Add Click Events
-			openButton.onClick.RemoveAllListeners();
-			openButton.onClick.AddListener(OnOpenButtonClick);
-
-			closeButton.onClick.RemoveAllListeners();
-			closeButton.onClick.AddListener(OnCloseButtonClick);
-
 			claimButton.onClick.RemoveAllListeners();
 			claimButton.onClick.AddListener(OnClaimButtonClick);
-
+			
 			//Check if the game is opened for the first time then set Reward_Claim_Datetime to the current datetime
 			if (string.IsNullOrEmpty(PlayerPrefs.GetString("Reward_Claim_Datetime")))
 				PlayerPrefs.SetString("Reward_Claim_Datetime", DateTime.Now.ToString());
@@ -99,7 +83,8 @@ namespace DailyRewardSystem
 					DateTime rewardClaimDatetime = DateTime.Parse(PlayerPrefs.GetString("Reward_Claim_Datetime", currentDatetime.ToString()));
 
 					//get total Hours between this 2 dates
-					double elapsedHours = (currentDatetime - rewardClaimDatetime).TotalHours; //TotalSeconds for try features
+					double elapsedHours = (currentDatetime - rewardClaimDatetime).TotalSeconds; //TotalSeconds for try features
+					nextReward.text = elapsedHours.ToString();
 
 					if (elapsedHours >= nextRewardDelay)
 						ActivateReward();
@@ -121,14 +106,8 @@ namespace DailyRewardSystem
 			//Update Reward UI
 			Reward reward = rewardsDB.GetReward(nextRewardIndex);
 
-			//Icon
-			if (reward.Type == RewardType.Coins)
-				rewardImage.sprite = CoinsSprite;
-			else if (reward.Type == RewardType.Hint)
-				rewardImage.sprite = HintSprite;
-
 			//Amount
-			rewardAmountText.text = string.Format("+{0}", reward.Amount);
+			rewardAmountText.text = string.Format("+{0} ", reward.Amount) + reward.Type;
 
 		}
 
@@ -170,17 +149,6 @@ namespace DailyRewardSystem
 			PlayerPrefs.SetString("Reward_Claim_Datetime", DateTime.Now.ToString());
 
 			DesactivateReward();
-		}
-
-		//Open | Close UI
-		void OnOpenButtonClick()
-		{
-			rewardsCanvas.SetActive(true);
-		}
-
-		void OnCloseButtonClick()
-		{
-			rewardsCanvas.SetActive(false);
 		}
 
 		//Update Mainmenu UI
