@@ -50,7 +50,6 @@ namespace DailyRewardSystem
 		void Start()
 		{
 			Initialize();
-
 			StopAllCoroutines();
 			StartCoroutine(CheckForRewards());
 		}
@@ -87,7 +86,9 @@ namespace DailyRewardSystem
 					nextReward.text = elapsedHours.ToString();
 
 					if (elapsedHours >= nextRewardDelay)
+                    {
 						ActivateReward();
+					}
 					else
 						DesactivateReward();
 				}
