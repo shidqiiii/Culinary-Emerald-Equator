@@ -1380,7 +1380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLabel: {fileID: 83258646}
   timerButton: {fileID: 1720073010}
-  hours: 25
+  hours: 12
   minutes: 0
   seconds: 0
 --- !u!1 &1738020858

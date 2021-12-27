@@ -8,7 +8,7 @@ namespace DailyRewardSystem
 	public enum RewardType
 	{
 		Coins,
-		Hint
+		Hints
 	}
 
 	[Serializable]
@@ -82,7 +82,7 @@ namespace DailyRewardSystem
 					DateTime rewardClaimDatetime = DateTime.Parse(PlayerPrefs.GetString("Reward_Claim_Datetime", currentDatetime.ToString()));
 
 					//get total Hours between this 2 dates
-					double elapsedHours = (currentDatetime - rewardClaimDatetime).TotalSeconds; //TotalSeconds for try features
+					double elapsedHours = (currentDatetime - rewardClaimDatetime).TotalHours; //TotalSeconds for try features
 					nextReward.text = elapsedHours.ToString();
 
 					if (elapsedHours >= nextRewardDelay)
@@ -132,7 +132,7 @@ namespace DailyRewardSystem
 				UpdateCoinsTextUI();
 
 			}
-			else if (reward.Type == RewardType.Hint)
+			else if (reward.Type == RewardType.Hints)
 			{
 				Debug.Log("<color=yellow>" + reward.Type.ToString() + " Claimed : </color>+" + reward.Amount);
 				GameData.Hint += reward.Amount;
