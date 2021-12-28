@@ -671,6 +671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winCondition: {fileID: 478685523}
+  losecondition: {fileID: 294514592940888431}
   pausemenu: {fileID: 1580224542}
   info: {fileID: 1611105955}
   puzzle: {fileID: 297431572}
@@ -680,6 +681,7 @@ MonoBehaviour:
   star2: {fileID: 597310402}
   star3: {fileID: 74160460}
   isPaused: 0
+  lose: 0
 --- !u!4 &193788536
 Transform:
   m_ObjectHideFlags: 0
@@ -5979,6 +5981,11 @@ PrefabInstance:
       objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
+--- !u!1 &294514592940888431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6883330446133730775, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
+  m_PrefabInstance: {fileID: 294514592940888430}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &483482694207524236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6339,6 +6346,10 @@ PrefabInstance:
     - target: {fileID: 6054850444587577019, guid: 61f5511b3d8316e449487c796d91da78, type: 3}
       propertyPath: m_Name
       value: Pause Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054850444587577019, guid: 61f5511b3d8316e449487c796d91da78, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6054850444635920715, guid: 61f5511b3d8316e449487c796d91da78, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

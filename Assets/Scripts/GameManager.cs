@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject winCondition, pausemenu, info, puzzle;
+    public GameObject winCondition, losecondition, pausemenu, info, puzzle;
 
     public TimeManager timeManager;
     public HintManager hintManager;
 
     public GameObject star1, star2, star3;
 
-    public bool isPaused;
+    public bool isPaused, lose;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +22,46 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        if (SceneManager.GetActiveScene().name == "Level 3 Jigsaw" || SceneManager.GetActiveScene().name == "Level 4 Jigsaw")
+        {
+            if (timeManager.currentTime >= 600f)
+            {
+                TimeStarJigsaw();
+                LoseCondition();
+                timeManager.timeActive = false;
+            }
+        }
+        if(SceneManager.GetActiveScene().name == "Level 3 Sliding" || SceneManager.GetActiveScene().name == "Level 4 Sliding")
+        {
+            if (timeManager.currentTime >= 900f)
+            {
+                TimeStarSliding();
+                LoseCondition();
+                timeManager.timeActive = false;
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "Level 5 Jigsaw")
+        {
+            if (timeManager.currentTime >= 600f)
+            {
+                TimeStarJigsaw();
+                LoseCondition();
+                timeManager.timeActive = false;
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "Level 5 Sliding")
+        {
+            if (timeManager.currentTime >= 900f)
+            {
+                TimeStarSliding();
+                LoseCondition();
+                timeManager.timeActive = false;
+            }
+        }
     }
+
     public void LoadScene(string _SceneName)
     {
         SceneManager.LoadScene(_SceneName);
@@ -38,6 +74,16 @@ public class GameManager : MonoBehaviour
         info.SetActive(true);
         winCondition.SetActive(false);
         pausemenu.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void LoseCondition()
+    {
+        puzzle.SetActive(false);
+        info.SetActive(false);
+        winCondition.SetActive(true);
+        pausemenu.SetActive(false);
+        losecondition.SetActive(true);
         Time.timeScale = 1f;
     }
 

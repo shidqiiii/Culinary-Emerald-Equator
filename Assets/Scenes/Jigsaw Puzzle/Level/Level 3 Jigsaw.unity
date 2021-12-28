@@ -1469,6 +1469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winCondition: {fileID: 478685523}
+  losecondition: {fileID: 294835075}
   pausemenu: {fileID: 1580224542}
   info: {fileID: 1562434518}
   puzzle: {fileID: 297431572}
@@ -1478,6 +1479,7 @@ MonoBehaviour:
   star2: {fileID: 597310402}
   star3: {fileID: 74160460}
   isPaused: 0
+  lose: 0
 --- !u!4 &193788536
 Transform:
   m_ObjectHideFlags: 0
@@ -1799,6 +1801,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &294835075 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6883330446133730775, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
+  m_PrefabInstance: {fileID: 294514592940888430}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &297431572
 GameObject:
   m_ObjectHideFlags: 0

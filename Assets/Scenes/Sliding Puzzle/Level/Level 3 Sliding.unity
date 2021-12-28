@@ -1123,6 +1123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winCondition: {fileID: 294514592940888431}
+  losecondition: {fileID: 294514592940888433}
   pausemenu: {fileID: 1580224542}
   info: {fileID: 192365046}
   puzzle: {fileID: 207466818}
@@ -1132,6 +1133,7 @@ MonoBehaviour:
   star2: {fileID: 597310402}
   star3: {fileID: 74160460}
   isPaused: 0
+  lose: 0
 --- !u!4 &193788536
 Transform:
   m_ObjectHideFlags: 0
@@ -6933,6 +6935,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &294514592940888433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6883330446133730775, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
+  m_PrefabInstance: {fileID: 294514592940888430}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &483482694207524236
 PrefabInstance:
   m_ObjectHideFlags: 0
