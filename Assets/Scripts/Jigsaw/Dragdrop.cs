@@ -8,6 +8,7 @@ public class Dragdrop : MonoBehaviour
     public GameObject detector;
     public Vector3 scaleAwal, randomPos;
     public bool onPos = false, onTempel = false;
+    public SoundManager soundManager;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class Dragdrop : MonoBehaviour
         {
             Vector3 posMouse = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
             transform.position = new Vector3(posMouse.x, posMouse.y, -1);
-            transform.localScale = new Vector2(1f, 1f);
+            transform.localScale = new Vector2(1.2f, 1.2f);
         }
     }
 
@@ -42,6 +43,7 @@ public class Dragdrop : MonoBehaviour
             transform.position = detector.transform.position;
             onTempel = true;
             transform.localScale = scaleAwal;
+            soundManager.PlayJigsaw();
         }
         else
         {

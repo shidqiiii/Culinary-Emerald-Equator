@@ -14,6 +14,7 @@ public class EndCondition : MonoBehaviour
     public SingleLevelJigsaw singleLevelJigsaw;
     public CoinManager coinManager;
     public GameManager gameManager;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +54,7 @@ public class EndCondition : MonoBehaviour
             gameManager.TimeStarJigsaw();
             singleLevelJigsaw.UpdateStar();
             coinManager.UpdateCoin();
+            audioSource.mute = true;
         }
     }
 }
