@@ -6288,6 +6288,7 @@ MonoBehaviour:
   rewardAmountText: {fileID: 1841504645}
   claimButton: {fileID: 656090690}
   rewardsNotification: {fileID: 1460298570}
+  maskot: {fileID: 1416842666}
   noMoreRewardsPanel: {fileID: 111167518}
   nextReward: {fileID: 165875507}
   rewardsDB: {fileID: 11400000, guid: f6f157ae56ce0a14ea3af35cee77fcbf, type: 2}
@@ -6739,6 +6740,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386050755}
   m_CullTransparentMesh: 1
+--- !u!1 &1416842666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6282955572044296715, guid: 3d9cf7e22942b50479e536ccc8872a37, type: 3}
+  m_PrefabInstance: {fileID: 1841504641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1421655715
 GameObject:
   m_ObjectHideFlags: 0

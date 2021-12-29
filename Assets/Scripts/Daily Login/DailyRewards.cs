@@ -29,6 +29,7 @@ namespace DailyRewardSystem
 		[SerializeField] Text rewardAmountText;
 		[SerializeField] Button claimButton;
 		[SerializeField] GameObject rewardsNotification;
+		[SerializeField] GameObject maskot;
 		[SerializeField] GameObject noMoreRewardsPanel;
 		[SerializeField] Text nextReward;
 
@@ -101,6 +102,7 @@ namespace DailyRewardSystem
 		{
 			isRewardReady = true;
 
+			maskot.SetActive(true);
 			noMoreRewardsPanel.SetActive(false);
 			rewardsNotification.SetActive(true);
 
@@ -116,6 +118,7 @@ namespace DailyRewardSystem
 		{
 			isRewardReady = false;
 
+			maskot.SetActive(false);
 			noMoreRewardsPanel.SetActive(true);
 			rewardsNotification.SetActive(false);
 		}
