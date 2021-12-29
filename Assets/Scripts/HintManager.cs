@@ -17,8 +17,6 @@ public class HintManager : MonoBehaviour
         if (PlayerPrefs.GetInt("getHint") == 1)
         {
             getHint = true;
-            PlayerPrefs.SetInt("getHint", 0);
-            Debug.Log("you've got a hint");
         }
     }
 
@@ -39,6 +37,11 @@ public class HintManager : MonoBehaviour
             UpdateHint();
             PlayerPrefs.SetInt("getHint", 1);
         }
+        else
+        {
+            Debug.Log("you've got a hint");
+        }
+        
         
     }
 
