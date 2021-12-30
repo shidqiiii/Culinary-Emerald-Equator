@@ -14,64 +14,92 @@ public class Notification : MonoBehaviour
             Id = "channel_id",
             Name = "Notifications Channel",
             Importance = Importance.High,
-            Description = "Reminder notifications",
+            Description = "Generic notifications",
         };
         AndroidNotificationCenter.RegisterNotificationChannel(channel);
 
-        NotificationsDailyLogin();
-        NotificationsDailySpin();
+        AndroidNotificationChannel channel2 = new AndroidNotificationChannel()
+        {
+            Id = "channel_id2",
+            Name = "Notifications Channel2",
+            Importance = Importance.High,
+            Description = "Generic notifications",
+        };
+        AndroidNotificationCenter.RegisterNotificationChannel(channel2);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (PlayerPrefs.GetInt("Notification") == 1)
+        {
+            NotificationsDailyLogin();
+            NotificationsDailySpin();
+        }
     }
 
     
 
     public void NotificationsDailyLogin()
     {
-        if (PlayerPrefs.GetInt("Notification") == 1)
+        AndroidNotification notification = new AndroidNotification();
+        notification.Title = "Claim Daily Rewards";
+        notification.Text = "Entering Culinary Emerald Equator and Claim Daily Rewards";
+        notification.SmallIcon = "icon_0";
+        notification.LargeIcon = "icon_1";
+        notification.ShowTimestamp = true;
+        notification.FireTime = System.DateTime.Now.AddHours(24);
+
+        var id = AndroidNotificationCenter.SendNotification(notification, "channel_id");
+
+        /*if (AndroidNotificationCenter.CheckScheduledNotificationStatus(id) == NotificationStatus.Scheduled)
         {
-            AndroidNotification notification = new AndroidNotification();
-            notification.Title = "Claim Daily Rewards";
-            notification.Text = "Entering Culinary Emerald Equator and Claim Daily Rewards";
-            notification.SmallIcon = "icon_0";
-            notification.LargeIcon = "icon_1";
-            notification.ShowTimestamp = true;
-            notification.FireTime = System.DateTime.Now.AddHours(24);
+            //AndroidNotificationCenter.CancelAllNotifications();
+            AndroidNotificationCenter.SendNotification(notification, "channel_id");
+        }*/
+        var notificationStatus = AndroidNotificationCenter.CheckScheduledNotificationStatus(id);
 
-            var id = AndroidNotificationCenter.SendNotification(notification, "channel_id");
-
-            if (AndroidNotificationCenter.CheckScheduledNotificationStatus(id) == NotificationStatus.Scheduled)
-            {
-                AndroidNotificationCenter.CancelAllNotifications();
-                AndroidNotificationCenter.SendNotification(notification, "channel_id");
-            }
+        if (notificationStatus == NotificationStatus.Scheduled)
+        {
+            // Replace the scheduled notification with a new notification.
+            AndroidNotificationCenter.UpdateScheduledNotification(id, notification, "channel_id");
         }
-            
+        else if (notificationStatus == NotificationStatus.Delivered)
+        {
+            // Remove the previously shown notification from the status bar.
+            AndroidNotificationCenter.CancelNotification(id);
+        }
     }
 
     public void NotificationsDailySpin()
     {
-        if (PlayerPrefs.GetInt("Notification") == 1)
+        AndroidNotification notification2 = new AndroidNotification();
+        notification2.Title = "Claim Free Spin";
+        notification2.Text = "Free Spin Available! Spin Now! and Claim Spin Rewards";
+        notification2.SmallIcon = "icon_0";
+        notification2.LargeIcon = "icon_1";
+        notification2.ShowTimestamp = true;
+        notification2.FireTime = System.DateTime.Now.AddHours(12);
+
+        var id2 = AndroidNotificationCenter.SendNotification(notification2, "channel_id2");
+
+        /*if (AndroidNotificationCenter.CheckScheduledNotificationStatus(id2) == NotificationStatus.Scheduled)
         {
-            AndroidNotification notification = new AndroidNotification();
-            notification.Title = "Claim Free Spin";
-            notification.Text = "Free Spin Available! Spin Now! and Claim Spin Rewards";
-            notification.SmallIcon = "icon_0";
-            notification.LargeIcon = "icon_1";
-            notification.ShowTimestamp = true;
-            notification.FireTime = System.DateTime.Now.AddHours(12);
+            //AndroidNotificationCenter.CancelAllNotifications();
+            AndroidNotificationCenter.SendNotification(notification2, "channel_id2");
+        }*/
+        var notificationStatus = AndroidNotificationCenter.CheckScheduledNotificationStatus(id2);
 
-            var id = AndroidNotificationCenter.SendNotification(notification, "channel_id");
-
-            if (AndroidNotificationCenter.CheckScheduledNotificationStatus(id) == NotificationStatus.Scheduled)
-            {
-                AndroidNotificationCenter.CancelAllNotifications();
-                AndroidNotificationCenter.SendNotification(notification, "channel_id");
-            }
+        if (notificationStatus == NotificationStatus.Scheduled)
+        {
+            // Replace the scheduled notification with a new notification.
+            AndroidNotificationCenter.UpdateScheduledNotification(id2, notification2, "channel_id");
+        }
+        else if (notificationStatus == NotificationStatus.Delivered)
+        {
+            // Remove the previously shown notification from the status bar.
+            AndroidNotificationCenter.CancelNotification(id2);
         }
     }
 }
