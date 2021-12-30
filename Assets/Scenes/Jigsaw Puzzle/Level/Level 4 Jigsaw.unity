@@ -824,7 +824,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.47, y: 1.47}
+  m_Size: {x: 1.13, y: 1.47}
   m_EdgeRadius: 0
 --- !u!210 &111220412
 SortingGroup:
@@ -2576,7 +2576,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.47, y: 1.47}
+  m_Size: {x: 1.13, y: 1.47}
   m_EdgeRadius: 0
 --- !u!210 &466697995
 SortingGroup:

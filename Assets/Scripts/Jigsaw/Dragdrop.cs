@@ -47,7 +47,7 @@ public class Dragdrop : MonoBehaviour
         }
         else
         {
-            transform.position = randomPos;
+            //transform.position = randomPos;
             onTempel = false;
             transform.localScale = scaleAwal;
         }
