@@ -7,11 +7,6 @@ public class NotificationManager : MonoBehaviour
 {
     public Toggle toggle;
 
-    private void Awake()
-    {
-        PlayerPrefs.SetInt("Notification", 1);
-    }
-
     // Start is called before the first frame update
     void Start()
     {

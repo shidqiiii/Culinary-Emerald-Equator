@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3902674053824139971}
-  - component: {fileID: 3902674053824139970}
   - component: {fileID: 3902674053824139968}
+  - component: {fileID: 800607750734233198}
   m_Layer: 0
   m_Name: Sounds
   m_TagString: Untagged
@@ -32,7 +32,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &3902674053824139970
+--- !u!114 &3902674053824139968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3902674053824139973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73244329d5fca3047897d6f19ab89ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSliding: {fileID: 8300000, guid: e6177d8547db998478bb7dd5089ebe38, type: 3}
+  moveJigsaw: {fileID: 8300000, guid: 8b3c6842525388e4c8a43e09fa83a078, type: 3}
+  gameOver: {fileID: 8300000, guid: 1f9f88bab74976a40ba44b806962b713, type: 3}
+  getReward: {fileID: 8300000, guid: 678c8dc60ec4e8744ae42077472100a9, type: 3}
+  clickButton: {fileID: 8300000, guid: a4f8cc2c4447e534290efa45afd39882, type: 3}
+--- !u!82 &800607750734233198
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,20 +145,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3902674053824139968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3902674053824139973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73244329d5fca3047897d6f19ab89ad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSliding: {fileID: 8300000, guid: e6177d8547db998478bb7dd5089ebe38, type: 3}
-  moveJigsaw: {fileID: 8300000, guid: 8b3c6842525388e4c8a43e09fa83a078, type: 3}
-  gameOver: {fileID: 8300000, guid: 1f9f88bab74976a40ba44b806962b713, type: 3}
-  getReward: {fileID: 8300000, guid: 678c8dc60ec4e8744ae42077472100a9, type: 3}
-  clickButton: {fileID: 8300000, guid: a4f8cc2c4447e534290efa45afd39882, type: 3}
