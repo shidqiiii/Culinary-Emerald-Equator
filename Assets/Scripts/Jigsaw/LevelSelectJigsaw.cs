@@ -12,10 +12,16 @@ public class LevelSelectJigsaw : MonoBehaviour
 
     public Sprite starSprite;
 
+    public int addHint;
+    int currentHint;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        if (PlayerPrefs.HasKey("Hint"))
+        {
+            currentHint = PlayerPrefs.GetInt("Hint");
+        }
     }
 
     // Update is called once per frame
@@ -64,6 +70,22 @@ public class LevelSelectJigsaw : MonoBehaviour
         if (unlocked)
         {
             SceneManager.LoadScene(scene);
+
+            if(PlayerPrefs.GetInt("Jigsaw Hint" + gameObject.name) == 1)
+            {
+                Debug.Log("you've got a hint");
+            }
+            else
+            {
+                AddHint();
+            }
         }
+    }
+
+    public void AddHint()
+    {
+        currentHint += addHint;
+        PlayerPrefs.SetInt("Hint", currentHint);
+        PlayerPrefs.SetInt("Jigsaw Hint" + gameObject.name, 1);
     }
 }

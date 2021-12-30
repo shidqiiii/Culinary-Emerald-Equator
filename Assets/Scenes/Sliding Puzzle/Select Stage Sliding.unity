@@ -326,6 +326,7 @@ MonoBehaviour:
   - {fileID: 124884501}
   - {fileID: 124884500}
   starSprite: {fileID: 21300000, guid: 8c0cece94fd7a744fb6d2ed4605917ad, type: 3}
+  addHint: 0
 --- !u!1 &124884499 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1364207725215793907, guid: 425c8d220a5c11d42b6edceec0edbb86, type: 3}
@@ -555,6 +556,7 @@ MonoBehaviour:
   - {fileID: 352915708}
   - {fileID: 352915707}
   starSprite: {fileID: 21300000, guid: 8c0cece94fd7a744fb6d2ed4605917ad, type: 3}
+  addHint: 0
 --- !u!1 &352915706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1364207725215793907, guid: 425c8d220a5c11d42b6edceec0edbb86, type: 3}
@@ -789,6 +791,7 @@ MonoBehaviour:
   - {fileID: 608915285}
   - {fileID: 608915284}
   starSprite: {fileID: 21300000, guid: 8c0cece94fd7a744fb6d2ed4605917ad, type: 3}
+  addHint: 1
 --- !u!1 &608915283 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1364207725215793907, guid: 425c8d220a5c11d42b6edceec0edbb86, type: 3}
@@ -1868,6 +1871,7 @@ MonoBehaviour:
   - {fileID: 1910736944}
   - {fileID: 1910736943}
   starSprite: {fileID: 21300000, guid: 8c0cece94fd7a744fb6d2ed4605917ad, type: 3}
+  addHint: 1
 --- !u!1 &1910736942 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1364207725215793907, guid: 425c8d220a5c11d42b6edceec0edbb86, type: 3}
@@ -2295,6 +2299,7 @@ MonoBehaviour:
   - {fileID: 1364207724857814481}
   - {fileID: 1364207724857814480}
   starSprite: {fileID: 21300000, guid: 8c0cece94fd7a744fb6d2ed4605917ad, type: 3}
+  addHint: 1
 --- !u!1 &1364207724857814480 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1364207725331079443, guid: 425c8d220a5c11d42b6edceec0edbb86, type: 3}
