@@ -9,7 +9,7 @@ public class SpinManager : MonoBehaviour
     public HintManager hintManager;
     public CoinManager coinManager;
     public GameObject popUp;
-    int coin, hint;
+    public AudioSource soundsfx;
     
     private bool spin;
     private float speed;
@@ -100,6 +100,7 @@ public class SpinManager : MonoBehaviour
             speed = 0;
             spin = false;
             popUp.SetActive(true);
+            soundsfx.Stop();
         }
     }
 
