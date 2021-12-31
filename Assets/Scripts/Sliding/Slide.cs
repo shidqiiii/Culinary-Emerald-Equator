@@ -21,7 +21,6 @@ public class Slide : MonoBehaviour
     public SingleLevelSliding singleLevelSliding;
 
     public Soundsfx soundsfx;
-    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -59,7 +58,7 @@ public class Slide : MonoBehaviour
                     tiles[tileIndex] = null;
                     emptySpaceIndex = tileIndex;
                 }
-                soundsfx.PlayJigsaw();
+                soundsfx.PlaySliding();
             }
         }
     }
@@ -149,7 +148,6 @@ public class Slide : MonoBehaviour
             gameManager.TimeStarSliding();
             singleLevelSliding.UpdateStar();
             coinManager.UpdateCoin();
-            audioSource.mute = true;
         }
     }
 }
