@@ -560,6 +560,7 @@ MonoBehaviour:
   star3: {fileID: 74160460}
   isPaused: 0
   lose: 0
+  soundsfx: {fileID: 657931628}
 --- !u!4 &193788536
 Transform:
   m_ObjectHideFlags: 0

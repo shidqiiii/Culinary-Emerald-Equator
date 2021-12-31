@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     public bool isPaused, lose;
 
+    public Soundsfx soundsfx;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +76,7 @@ public class GameManager : MonoBehaviour
         info.SetActive(true);
         winCondition.SetActive(false);
         pausemenu.SetActive(false);
+        soundsfx.PlayVictory();
         Time.timeScale = 1f;
     }
 
