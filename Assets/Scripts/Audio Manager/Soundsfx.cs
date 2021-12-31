@@ -2,19 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class Soundsfx : MonoBehaviour
 {
     public AudioClip moveSliding;
     public AudioClip moveJigsaw;
-    public AudioClip gameOver;
+    public AudioClip victory;
     public AudioClip getReward;
     public AudioClip clickButton;
+    public AudioClip spin;
 
     private AudioSource player;
 
     private void Start()
     {
         player = GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {
+        SfxMuteUnMute();
+    }
+
+    public void SfxMuteUnMute()
+    {
+        if (PlayerPrefs.GetInt("sfx") == 1)
+        {
+            player.mute = true;
+        }
+        else
+        {
+            player.mute = false;
+        }
     }
 
 
@@ -28,9 +46,9 @@ public class SoundManager : MonoBehaviour
         player.PlayOneShot(moveJigsaw);
     }
 
-    public void PlayGameOver()
+    public void PlayVictory()
     {
-        player.PlayOneShot(gameOver);
+        player.PlayOneShot(victory);
     }
 
     public void PlayClick()
@@ -41,5 +59,10 @@ public class SoundManager : MonoBehaviour
     public void PlayGetReward()
     {
         player.PlayOneShot(getReward);
+    }
+
+    public void PlaySpin()
+    {
+        player.PlayOneShot(spin);
     }
 }

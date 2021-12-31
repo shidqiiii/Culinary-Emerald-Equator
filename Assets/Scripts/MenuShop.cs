@@ -14,6 +14,8 @@ public class MenuShop : MonoBehaviour
 
     int coin, hint, BuyHint;
 
+    public Soundsfx soundsfx;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,6 +82,7 @@ public class MenuShop : MonoBehaviour
             PlayerPrefs.SetInt("Coin", coinManager.currentCoin);
             PlayerPrefs.SetInt("Hint", hintManager.currentHint);
             PlayerPrefs.SetInt("BuyHint", BuyHint);
+            soundsfx.PlayGetReward();
             popup.SetActive(true);
             textHint.text = hint.ToString() + " Hint";
         }

@@ -14,6 +14,7 @@ public class QuestManager : MonoBehaviour
     public CoinManager coinManager;
     public HintManager hintManager;
     public MenuQuest menuQuest;
+    public Soundsfx soundsfx;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,7 @@ public class QuestManager : MonoBehaviour
 
                 hasClaim = true;
                 menuQuest.HasClaim();
+                soundsfx.PlayGetReward();
 
                 popup.SetActive(true);
                 text.text = reward;

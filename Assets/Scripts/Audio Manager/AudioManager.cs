@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     private static AudioManager instance;
 
-    public AudioSource BGM, SFX;
-    public Toggle toggleBGM, toggleSFX;
+    private AudioSource player;
 
     void Awake()
     {
@@ -28,47 +26,24 @@ public class AudioManager : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
 
-        if (PlayerPrefs.GetInt("bgm") == 1)
-        {
-            toggleBGM.isOn = true;
-        }
-        if (PlayerPrefs.GetInt("sfx") == 1)
-        {
-            toggleSFX.isOn = true;
-        }
+        player = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        BgmMuteUnMute();
     }
 
-    public void BgmOnOff()
+    public void BgmMuteUnMute()
     {
-        if (toggleBGM.isOn)
+        if (PlayerPrefs.GetInt("bgm") == 1)
         {
-            PlayerPrefs.SetInt("bgm", 1);
-            BGM.mute = true;
+            player.mute = true;
         }
         else
         {
-            PlayerPrefs.SetInt("bgm", 0);
-            BGM.mute = false;
+            player.mute = false;
         }
-    }
-
-    public void SfxOnOff()
-    {
-        if (toggleSFX.isOn)
-        {
-            PlayerPrefs.SetInt("sfx", 1);
-            SFX.mute = true;
-        }
-        else
-        {
-            PlayerPrefs.SetInt("sfx", 0);
-            SFX.mute = false;
-        }
-    }
+    }    
 }
