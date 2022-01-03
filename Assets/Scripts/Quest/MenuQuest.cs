@@ -46,6 +46,9 @@ public class MenuQuest : MonoBehaviour
 
     void QuestHistory()
     {
+        texts[2].text = HintUse.ToString() + "/ 10";
+        texts[3].text = stars.ToString() + "/ 15";
+        texts[4].text = BuyHint.ToString() + "/ 5";
         if ((PlayerPrefs.GetInt("Jigsaw Lv" + 5) > 2) || (PlayerPrefs.GetInt("Sliding Lv" + 5) > 2))
         {
             lockImages[0].SetActive(false);
@@ -62,19 +65,19 @@ public class MenuQuest : MonoBehaviour
         {
             lockImages[2].SetActive(false);
             questManagers[2].unlocked = true;
-            texts[2].text = HintUse.ToString() + "/ 10";
+            
         }
         if (stars >= 15)
         {
             lockImages[3].SetActive(false);
             questManagers[3].unlocked = true;
-            texts[3].text = stars.ToString() + "/ 15";
+            
         }
         if (PlayerPrefs.GetInt("BuyHint") >= 5)
         {
             lockImages[4].SetActive(false);
             questManagers[4].unlocked = true;
-            texts[4].text = BuyHint.ToString() + "/ 5";
+            
         }
     }
 
