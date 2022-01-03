@@ -44,33 +44,27 @@ public class MenuShop : MonoBehaviour
         switch (price)
         {
             case 1:
-                Debug.Log("bayar 1000");
-                coin = 1000;
+                Debug.Log("bayar 100");
+                coin = 100;
                 hint = 1;
                 break;
 
             case 2:
-                Debug.Log("bayar 2500");
-                coin = 2500;
+                Debug.Log("bayar 200");
+                coin = 200;
                 hint = 3;
                 break;
 
             case 3:
-                Debug.Log("bayar 7000");
-                coin = 7000;
-                hint = 10;
+                Debug.Log("bayar 300");
+                coin = 300;
+                hint = 5;
                 break;
 
             case 4:
-                Debug.Log("bayar 8500");
-                coin = 8500;
-                hint = 15;
-                break;
-
-            case 5:
-                Debug.Log("bayar 10000");
-                coin = 10000;
-                hint = 20;
+                Debug.Log("bayar 550");
+                coin = 550;
+                hint = 10;
                 break;
         }
 
