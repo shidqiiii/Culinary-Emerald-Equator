@@ -456,7 +456,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!61 &83665201
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -799,7 +799,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!61 &111220411
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1073,7 +1073,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!61 &167183751
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2085,7 +2085,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!1 &324868693
 GameObject:
   m_ObjectHideFlags: 0
@@ -2364,7 +2364,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!61 &376495699
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2696,7 +2696,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!61 &466697994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4292,7 +4292,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!61 &659429799
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4768,7 +4768,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!1 &783511958
 GameObject:
   m_ObjectHideFlags: 0
@@ -5207,7 +5207,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!61 &1043508939
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5948,7 +5948,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!61 &1173314492
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6844,7 +6844,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!61 &1374286845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7036,7 +7036,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!61 &1429502949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7228,7 +7228,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!61 &1439432123
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8552,7 +8552,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!61 &1841642628
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8744,7 +8744,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!61 &1855441080
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9094,7 +9094,7 @@ MonoBehaviour:
   randomPos: {x: 0, y: 0, z: 0}
   onPos: 0
   onTempel: 0
-  soundsfx: {fileID: 0}
+  soundsfx: {fileID: 1693244788}
 --- !u!61 &1952411964
 BoxCollider2D:
   m_ObjectHideFlags: 0
