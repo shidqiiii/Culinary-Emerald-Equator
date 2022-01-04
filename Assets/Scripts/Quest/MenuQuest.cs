@@ -65,19 +65,19 @@ public class MenuQuest : MonoBehaviour
         {
             lockImages[2].SetActive(false);
             questManagers[2].unlocked = true;
-            
+            texts[2].text = "10/10";
         }
         if (stars >= 15)
         {
             lockImages[3].SetActive(false);
             questManagers[3].unlocked = true;
-            
+            texts[3].text = "15/15";
         }
         if (PlayerPrefs.GetInt("BuyHint") >= 5)
         {
             lockImages[4].SetActive(false);
             questManagers[4].unlocked = true;
-            
+            texts[4].text = "5/5";
         }
     }
 

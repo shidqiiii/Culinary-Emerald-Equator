@@ -275,8 +275,8 @@ MonoBehaviour:
   - {fileID: 1395793196}
   jigsawLevel: 0
   slidingLevel: 0
-  HintUse: 10
-  BuyHint: 5
+  HintUse: 0
+  BuyHint: 0
   stars: 0
 --- !u!1 &192134595
 GameObject:
