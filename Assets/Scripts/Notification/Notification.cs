@@ -27,16 +27,17 @@ public class Notification : MonoBehaviour
         };
         AndroidNotificationCenter.RegisterNotificationChannel(channel2);
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         if (PlayerPrefs.GetInt("Notification") == 1)
         {
             NotificationsDailyLogin();
             NotificationsDailySpin();
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 
     
