@@ -51,8 +51,8 @@ public class SpinManager : MonoBehaviour
                 }
             }
             if ((transform.rotation.eulerAngles.z > angle[0] && transform.rotation.eulerAngles.z < angle[1]) || (transform.rotation.eulerAngles.z < angle[15] && transform.rotation.eulerAngles.z > angle[16]))
-                {reward_txt.text = "25 Coin";   
-                coinManager.currentCoin += 25;
+                {reward_txt.text = "30 Coin";   
+                coinManager.currentCoin += 30;
                 PlayerPrefs.SetInt("Coin", coinManager.currentCoin);
                 }  
 
@@ -63,8 +63,8 @@ public class SpinManager : MonoBehaviour
                 }
           
             if ((transform.rotation.eulerAngles.z > angle[2] && transform.rotation.eulerAngles.z < angle[3]) || (transform.rotation.eulerAngles.z < angle[13] && transform.rotation.eulerAngles.z > angle[14]))
-                {reward_txt.text = "50 Coin";
-                coinManager.currentCoin += 50;
+                {reward_txt.text = "10 Coin";
+                coinManager.currentCoin += 10;
                 PlayerPrefs.SetInt("Coin", coinManager.currentCoin);
                 }
      
@@ -75,8 +75,8 @@ public class SpinManager : MonoBehaviour
                 }
 
             if ((transform.rotation.eulerAngles.z > angle[4] && transform.rotation.eulerAngles.z < angle[5]) || (transform.rotation.eulerAngles.z < angle[11] && transform.rotation.eulerAngles.z > angle[12]))
-                {reward_txt.text = "1000 Coin";                  
-                coinManager.currentCoin += 1000;
+                {reward_txt.text = "150 Coin";                  
+                coinManager.currentCoin += 150;
                 PlayerPrefs.SetInt("Coin", coinManager.currentCoin);
                 }    
 
@@ -87,14 +87,14 @@ public class SpinManager : MonoBehaviour
                 }
 
             if ((transform.rotation.eulerAngles.z > angle[6] && transform.rotation.eulerAngles.z < angle[7]) || (transform.rotation.eulerAngles.z < angle[9] && transform.rotation.eulerAngles.z > angle[10]))  
-                {reward_txt.text = "200 Coin";
-                coinManager.currentCoin += 200;
+                {reward_txt.text = "100 Coin";
+                coinManager.currentCoin += 100;
                 PlayerPrefs.SetInt("Coin", coinManager.currentCoin);
                 }
         
             if ((transform.rotation.eulerAngles.z > angle[7] && transform.rotation.eulerAngles.z < angle[8]) || (transform.rotation.eulerAngles.z < angle[0] && transform.rotation.eulerAngles.z > angle[9]))
-                {reward_txt.text = "100 Coin"; 
-                coinManager.currentCoin += 100;
+                {reward_txt.text = "200 Coin"; 
+                coinManager.currentCoin += 200;
                 PlayerPrefs.SetInt("Coin", coinManager.currentCoin);
                 }  
 

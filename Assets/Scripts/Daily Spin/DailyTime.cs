@@ -92,7 +92,6 @@ public class DailyTime : MonoBehaviour {
 		{
 			_timerComplete = true;
 			enableButton();
-			timerButton.enabled = true;
 		}
 		else
 		{

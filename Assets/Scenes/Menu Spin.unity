@@ -514,7 +514,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1f9c29f30cc783147921f587f4780cd0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e4b2c7cb205397439e4c077655d47a1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1685,8 +1685,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1720073010}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1760,9 +1760,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLabel: {fileID: 83258646}
   timerButton: {fileID: 1720073010}
-  hours: 12
+  hours: 0
   minutes: 0
-  seconds: 0
+  seconds: 10
 --- !u!1 &1738020858
 GameObject:
   m_ObjectHideFlags: 0
