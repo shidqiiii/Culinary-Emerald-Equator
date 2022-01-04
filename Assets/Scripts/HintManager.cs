@@ -26,7 +26,7 @@ public class HintManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         hintText.text = currentHint.ToString();
     }

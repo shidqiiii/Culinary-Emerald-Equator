@@ -3724,6 +3724,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1246489950}
+        m_TargetAssemblyTypeName: DailyRewardSystem.DailyRewards, Assembly-CSharp
+        m_MethodName: OnClaimButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &656090691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3762,6 +3774,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656090688}
   m_CullTransparentMesh: 1
+--- !u!114 &689612964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4512649313245431629, guid: 30d43dd6f006359458e3bcfa8338ccdf, type: 3}
+  m_PrefabInstance: {fileID: 1279537156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d87719827d8fb04f8eae97c8be04852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &700654759
 GameObject:
   m_ObjectHideFlags: 0
@@ -6216,8 +6239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ccdb028d27597144bec41c0c9f46101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsText: {fileID: 1585121292}
-  hintText: {fileID: 1146624864}
+  coinManager: {fileID: 689612964}
+  hintManager: {fileID: 177656744}
   rewardAmountText: {fileID: 1841504645}
   claimButton: {fileID: 656090690}
   rewardsNotification: {fileID: 1460298570}

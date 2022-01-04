@@ -21,8 +21,8 @@ namespace DailyRewardSystem
 	public class DailyRewards : MonoBehaviour
 	{
 		[Header("Main Menu UI")]
-		[SerializeField] Text coinsText;
-		[SerializeField] Text hintText;
+		public CoinManager coinManager;
+		public HintManager hintManager;
 
 		[Space]
 		[Header("Reward UI")]
@@ -57,16 +57,12 @@ namespace DailyRewardSystem
 
         private void Update()
         {
-			UpdateCoinsTextUI();
-			UpdateHintsTextUI();
+
 		}
 
         void Initialize()
 		{
 			nextRewardIndex = PlayerPrefs.GetInt("Next_Reward_Index", 0);
-
-			claimButton.onClick.RemoveAllListeners();
-			claimButton.onClick.AddListener(OnClaimButtonClick);
 			
 			//Check if the game is opened for the first time then set Reward_Claim_Datetime to the current datetime
 			if (string.IsNullOrEmpty(PlayerPrefs.GetString("Reward_Claim_Datetime")))
@@ -123,7 +119,7 @@ namespace DailyRewardSystem
 			rewardsNotification.SetActive(false);
 		}
 
-		void OnClaimButtonClick()
+		public void OnClaimButtonClick()
 		{
 			Reward reward = rewardsDB.GetReward(nextRewardIndex);
 
@@ -133,7 +129,6 @@ namespace DailyRewardSystem
 				Debug.Log("<color=white>" + reward.Type.ToString() + " Claimed : </color>+" + reward.Amount);
 				GameData.Coin += reward.Amount;
 				UpdateCoinsTextUI();
-
 			}
 			else if (reward.Type == RewardType.Hints)
 			{
@@ -158,12 +153,12 @@ namespace DailyRewardSystem
 		//Update Mainmenu UI
 		void UpdateCoinsTextUI()
 		{
-			coinsText.text = GameData.Coin.ToString();
+			coinManager.currentCoin = GameData.Coin;
 		}
 
 		void UpdateHintsTextUI()
 		{
-			hintText.text = GameData.Hint.ToString();
+			hintManager.currentHint = GameData.Hint;
 		}
 	}
 
