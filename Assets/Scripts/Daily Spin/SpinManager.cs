@@ -93,8 +93,8 @@ public class SpinManager : MonoBehaviour
                 }
         
             if ((transform.rotation.eulerAngles.z > angle[7] && transform.rotation.eulerAngles.z < angle[8]) || (transform.rotation.eulerAngles.z < angle[0] && transform.rotation.eulerAngles.z > angle[9]))
-                {reward_txt.text = "200 Coin"; 
-                coinManager.currentCoin += 200;
+                {reward_txt.text = "50 Coin"; 
+                coinManager.currentCoin += 50;
                 PlayerPrefs.SetInt("Coin", coinManager.currentCoin);
                 }  
 
