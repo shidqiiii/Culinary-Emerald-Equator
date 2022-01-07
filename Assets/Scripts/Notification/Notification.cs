@@ -5,7 +5,15 @@ using Unity.Notifications.Android;
 
 public class Notification : MonoBehaviour
 {
-    
+    private void Awake()
+    {
+        if (PlayerPrefs.GetInt("Notification") == 1)
+        {
+            NotificationsDailyLogin();
+            NotificationsDailySpin();
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +34,6 @@ public class Notification : MonoBehaviour
             Description = "Generic notifications",
         };
         AndroidNotificationCenter.RegisterNotificationChannel(channel2);
-
-        if (PlayerPrefs.GetInt("Notification") == 1)
-        {
-            NotificationsDailyLogin();
-            NotificationsDailySpin();
-        }
     }
 
     // Update is called once per frame

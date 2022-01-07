@@ -9836,7 +9836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 294514592143471709, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Select Stage Jigsaw
+      value: Select Puzzle
       objectReference: {fileID: 0}
     - target: {fileID: 294514592143471709, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -10032,7 +10032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 294514593121949537, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level 4 Jigsaw
+      value: Select Stage Jigsaw
       objectReference: {fileID: 0}
     - target: {fileID: 294514593121949537, guid: 82dd894d7de13f543bcf1ee65608a78e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
